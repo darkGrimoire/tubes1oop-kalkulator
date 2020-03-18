@@ -1,0 +1,9 @@
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.exe.config
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.exe
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.pdb
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csprojAssemblyReference.cache
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.Properties.Resources.resources
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csproj.GenerateResource.cache
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.exe
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.pdb
+D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.Form1.resources
