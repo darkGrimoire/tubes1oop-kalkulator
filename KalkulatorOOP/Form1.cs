@@ -81,6 +81,9 @@ namespace KalkulatorOOP
         private void buttonTK_Click(object sender, EventArgs e){
             this.textBox.Text += buttonTK.Text;
         }
+        private void buttonPangkat_Click(object sender, EventArgs e){
+            this.textBox.Text += buttonPangkat.Text;
+        }
         private void buttonAns_Click(object sender, EventArgs e){
 
         }
