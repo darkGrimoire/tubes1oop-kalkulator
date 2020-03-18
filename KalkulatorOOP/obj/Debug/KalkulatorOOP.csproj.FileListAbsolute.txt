@@ -1,0 +1,8 @@
+D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csprojAssemblyReference.cache
+D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.Properties.Resources.resources
+D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csproj.GenerateResource.cache
+D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.exe.config
+D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.exe
+D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.pdb
+D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.exe
+D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.pdb
