@@ -165,9 +165,9 @@ namespace KalkulatorOOP
         }
     }
 
-    public class CosExpression : UnaryExpression
+    public class TanExpression : UnaryExpression
     {
-        public CosExpression(Expression* a)
+        public TanExpression(Expression* a)
         {
 
         }

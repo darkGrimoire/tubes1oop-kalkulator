@@ -20,3 +20,9 @@ D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\Kalkulat
 >>>>>>> 1bdbc3a152a3d2fbd9f5c01a6ed94945b4f55d2b
 D:\Kuliah\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.Form1.resources
 D:\informatika\smstr 4\OOP\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csproj.CoreCompileInputs.cache
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csprojAssemblyReference.cache
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.Form1.resources
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.Properties.Resources.resources
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csproj.GenerateResource.cache
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.exe
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.pdb
