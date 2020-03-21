@@ -50,7 +50,7 @@ public class Parser
 				i++;
 				while (i < token.Length && token[i] >= '0' && token[i] <= '9')
 				{
-					buffer
+					buffer;
 					i++;
 				}
 			}
