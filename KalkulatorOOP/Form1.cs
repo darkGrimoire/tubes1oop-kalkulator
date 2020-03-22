@@ -192,7 +192,22 @@ namespace KalkulatorOOP
             }
         }
         private void buttonPangkat_Click(object sender, EventArgs e){
-            this.textBox.Text += buttonPangkat.Text;
+            if (hasPassedNegative)
+            {
+                // do nothing
+            }
+            else if (hasPassedOperator)
+            {
+                this.textBox.Text = textBox.Text.Substring(0, textBox.Text.Length - 1);
+                this.textBox.Text += buttonPangkat.Text;
+            }
+            else
+            {
+                this.textBox.Text += buttonPangkat.Text;
+                hasPassedOperator = true;
+                hasPassedNum = false;
+                hasPassedPoint = false;
+            }
         }
         private void buttonAns_Click(object sender, EventArgs e){
             ans = this.ans;
