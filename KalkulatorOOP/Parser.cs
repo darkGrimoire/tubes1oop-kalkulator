@@ -142,4 +142,11 @@ public class Parser
 			Console.WriteLine(o.GetType().ToString());
 		}
 	}
+
+	public double Solve()
+	{
+		Solver solve = new Solver(parseList);
+		solve.Solve();
+		return solve.getAns();
+	}
 }

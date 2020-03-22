@@ -22,8 +22,9 @@ using KalkulatorOOP;
 
             //---DEBUGGING CONSOLE HERE---//
 
-            Parser parser = new Parser("3--4");
-            parser.Peek();
+            Parser parser = new Parser("3+2");
+        //parser.Peek();
+        Console.WriteLine(parser.Solve());
         }
     }
 //}

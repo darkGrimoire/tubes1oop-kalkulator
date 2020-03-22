@@ -2,3 +2,12 @@
 .vs/**
 KalkulatorOOP/.vs/**
 KalkulatorOOP/obj/**
+KalkulatorOOP/obj/Debug/KalkulatorOOP.pdb
+KalkulatorOOP/obj/Debug/KalkulatorOOP.exe
+KalkulatorOOP/obj/Debug/KalkulatorOOP.csproj.FileListAbsolute.txt
+KalkulatorOOP/bin/Debug/KalkulatorOOP.pdb
+KalkulatorOOP/bin/Debug/KalkulatorOOP.exe
+KalkulatorOOP/.vs/KalkulatorOOP/v16/Server/sqlite3/storage.ide-wal
+KalkulatorOOP/.vs/KalkulatorOOP/v16/Server/sqlite3/storage.ide-shm
+KalkulatorOOP/.vs/KalkulatorOOP/v16/Server/sqlite3/storage.ide
+KalkulatorOOP/.vs/KalkulatorOOP/v16/.suo
