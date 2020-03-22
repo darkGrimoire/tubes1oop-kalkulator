@@ -12,7 +12,7 @@ namespace KalkulatorOOP
 {
     public partial class Form1 : Form
     {
-        MCMRQueue<double> queue = new MCMRQueue<double>(10);
+        MCMRQueue<double> queue = new MCMRQueue<double>();
         bool hasFirstClick = false;
         // VARIABLES
         double ans = 0;
@@ -293,17 +293,11 @@ namespace KalkulatorOOP
         private void buttonMR_Click(object sender, EventArgs e){
             if (hasFirstClick == true)
             {
-                double mR = 0;
-                try
-                {
-                    mR = queue.Pop();
-                }
-                catch (Exception ex)
-                {
-                    errorbox.Text = ex.Message;
-                }
-                //textBox.Clear();
-                this.textBox.Text += mR.ToString();
+                double mR;
+                mR = queue.Peek();
+                queue.Pop();
+                textBox.Clear();
+                this.textBox.Text = mR.ToString();
             }
             else{}
         }
@@ -330,5 +324,6 @@ namespace KalkulatorOOP
             this.Close();
         }
 
+        
     }
 }

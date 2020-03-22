@@ -635,11 +635,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label2.Location = new System.Drawing.Point(14, 549);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 31;
-            this.label2.Text = "label2";
+            this.label2.Text = "Error:";
             // 
             // Form1
             // 
