@@ -32,3 +32,6 @@ C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOO
 C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csproj.GenerateResource.cache
 C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.exe
 C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.pdb
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.exe.config
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.exe
+D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\bin\Debug\KalkulatorOOP.pdb

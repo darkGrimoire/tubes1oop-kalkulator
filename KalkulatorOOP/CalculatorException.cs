@@ -8,79 +8,55 @@ namespace CalculatorException
 {
     public class DivisionByZeroException : Exception
     {
-        public DivisionByZeroException() : base("Error pembagian dengan 0")
+        public override string Message
         {
-
-        }
-        public void PrintMessage()
-        {
-            Console.WriteLine(this.Message);
-        }
-    }
-    
-    public class NegativeIntegerRootException : Exception
-    {
-        private int integerNumber;
-        NegativeIntegerRootException() : base()
-        {
-
-        }
-        public NegativeIntegerRootException(int num) : base("Error mencari akar dari ")
-        {
-            this.integerNumber = num;
-        }
-        public void PrintMessage()
-        {
-            Console.Write(this.Message);
-            Console.WriteLine(this.integerNumber);
+            get
+            {
+                return "Error pembagian dengan 0";
+            }
         }
     }
 
-    public class NegativeRealRootException : Exception
+    public class NegativeRootException : Exception
     {
         private double realNumber;
-        NegativeRealRootException() : base()
-        {
-
-        }
-        public NegativeRealRootException(double num) : base("Error mencari akar dari ")
+        NegativeRootException(int num)
         {
             this.realNumber = num;
         }
-        public void PrintMessage()
+        public override string Message
         {
-            Console.Write(this.Message);
-            Console.WriteLine(this.realNumber);
+            get
+            {
+                return "Error mencari akar dari " + this.realNumber;
+            }
         }
     }
 
     public class TooManyInputsException : Exception
     {
         private int inputSize;
-        public TooManyInputsException() : base()
-        {
-
-        }
-        public TooManyInputsException(int size) : base("Error input Terlalu panjang\nPanjang input : ")
+        public TooManyInputsException(int size)
         {
             this.inputSize = size;
         }
-        public void PrintMessage()
+        public override string Message
         {
-            Console.Write(this.Message);
-            Console.WriteLine(inputSize);
+            get
+            {
+                return "Error input Terlalu panjang\nPanjang input : " + this.inputSize;
+            }
         }
     }
 
     public class QueueEmptyException : Exception
     {
-        public QueueEmptyException() : base("Error Queue kosong")
+        public override string Message
         {
-
-        }
-        public void PrintMessage()
-        {
-            Console.WriteLine(this.Message);
+            get
+            {
+                return "Error Queue kosong";
+            }
         }
     }
 
@@ -96,19 +72,17 @@ namespace CalculatorException
             kali,
             bagi
         }
-        public RepeatButtonPushException() : base()
-        {
-
-        }
-        public RepeatButtonPushException(int buttonID) : base("Error menekan tombol berulang-ulang\nTombol yang ditekan : ")
+        public RepeatButtonPushException(int buttonID)
         {
             this.buttonID = buttonID;
         }
 
-        public void PrintMessage()
+        public override string Message
         {
-            Console.Write(this.Message);
-            Console.WriteLine(this.buttonName[this.buttonID]);
+            get
+            {
+                return "Error menekan tombol berulang-ulang\nTombol yang ditekan : " + this.buttonName[this.buttonID];
+            }
         }
     }
 }
