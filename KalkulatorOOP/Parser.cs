@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using KalkulatorOOP;
+using CalculatorException;
 
 // ASUMSI: Unary Expression dibuat di Parser.
 public class Parser
@@ -11,8 +12,10 @@ public class Parser
 	{
 		int i = 0;
 		// Default number = Integer
+		Stack<int> unaryStack = new Stack<int>(); // 1 negatif, 2 root, 3 sin, 4 cos, 5 tan
 		bool isNegative = false;
-		bool isRoot = false;
+		bool firstNum = true;
+		//bool isRoot = false;
 		string isTrigonometry = "";
 		bool isNum = false;
 		bool isUnary = false;
@@ -20,6 +23,7 @@ public class Parser
 		bool hasPassedOperator = false;
 		bool hasPassedNum = false;
 		StringBuilder buffer = new StringBuilder("");
+		unaryStack.Push(0);
 		while (i < token.Length)
 		{
 			debug = token[i].ToString();
@@ -28,17 +32,31 @@ public class Parser
 			// If token is unary expression (-, √), make the empty Unary Expression
 			else if ((token[i] == '-' || token[i] == '√') && !hasPassedNum)
 			{
-				if (hasPassedOperator || i == 0 || isNegative)
+				if (hasPassedOperator || firstNum)
 				{
 					if (token[i] == '-')
 					{
 						//UnaryExpression unaryOp = new NegativeExpression();
-						isNegative = true;
+						if (unaryStack.Peek() == 1)
+						{
+							throw new Exception();
+						}
+						else if (unaryStack.Peek() == 2)
+						{
+							throw new Exception();
+						}
+						else
+						{
+							unaryStack.Push(1);
+							isUnary = true;
+						}
 					}
 					else
 					{
 						//UnaryExpression unaryOp = new RootExpression();
-						isRoot = true;
+						//isRoot = true;
+						unaryStack.Push(2);
+						isUnary = true;
 					}
 					hasPassedOperator = false;
 				}
@@ -55,12 +73,26 @@ public class Parser
 			{
 				//UnaryExpression unaryOp = new TrigonometryExpression(token.Substring(i, 3));
 				isTrigonometry = token.Substring(i, 3);
-				i += 3;
+				isUnary = true;
+				if (isTrigonometry.Equals("sin"))
+				{
+					unaryStack.Push(3);
+				}
+				if (isTrigonometry.Equals("cos"))
+				{
+					unaryStack.Push(4);
+				}
+				if (isTrigonometry.Equals("tan"))
+				{
+					unaryStack.Push(5);
+				}
+				i += 2;
 			}
 			// If token is an operator, push it to parseList
 			else if (token[i] == '(' || token[i] == ')' || token[i] == '^'
 		  || token[i] == '+' || token[i] == '-' || token[i] == '*' || token[i] == '/')
 			{
+				if (firstNum) { firstNum = false; }
 				Operator op = new Operator(token[i]);
 				parseList.Add(op);
 				hasPassedOperator = true;
@@ -70,7 +102,7 @@ public class Parser
 			else if (token[i] >= '0' && token[i] <= '9')
 			{
 				isNum = true;
-				while (i < token.Length && ((token[i] >= '0' && token[i] <= '9')  || token[i] ==  '.'))
+				while (i < token.Length && ((token[i] >= '0' && token[i] <= '9') || token[i] == '.'))
 				{
 					buffer.Append(token[i]);
 					i++;
@@ -93,42 +125,163 @@ public class Parser
 			if (isNum)
 			{
 				TerminalExpression termExpr = new TerminalExpression(double.Parse(buffer.ToString(), System.Globalization.CultureInfo.InvariantCulture));
-				if (isRoot && isNegative)
+				if (isUnary)
 				{
-					UnaryExpression UnExpr = new NegativeExpression(new RootExpression(termExpr)); isUnary = true;
-					isRoot = false; isNegative = false;
-					this.parseList.Add(UnExpr);
-				}
-				if (isRoot)
-				{
-					UnaryExpression UnExpr = new RootExpression(termExpr); isUnary = true;
-					this.parseList.Add(UnExpr);
-				}
-				if (isTrigonometry.Equals("sin"))
-				{
-					UnaryExpression UnExpr = new SinExpression(termExpr); isUnary = true;
-					this.parseList.Add(UnExpr);
-				}
-				if (isTrigonometry.Equals("cos"))
-				{
-					UnaryExpression UnExpr = new CosExpression(termExpr); isUnary = true;
-					this.parseList.Add(UnExpr);
-				}
-				if (isTrigonometry.Equals("tan"))
-				{
-					UnaryExpression UnExpr = new TanExpression(termExpr); isUnary = true;
-					this.parseList.Add(UnExpr);
-				}
-				if (isNegative)
-				{
-					UnaryExpression UnExpr = new NegativeExpression(termExpr); isUnary = true;
-					this.parseList.Add(UnExpr);
+					UnaryExpression x, y;
+					int unaryCode;
+					unaryCode = unaryStack.Pop();
+					if (unaryCode == 1) 
+					{
+						x = new NegativeExpression(termExpr);
+						while (unaryStack.Count > 1)
+						{
+							unaryCode = unaryStack.Pop();
+							if (unaryCode == 1)
+							{
+								x = new NegativeExpression(x);
+							}
+							else if (unaryCode == 2)
+							{
+								x = new RootExpression(x);
+							}
+							else if (unaryCode == 3)
+							{
+								x = new SinExpression(x);
+							}
+							else if (unaryCode == 4)
+							{
+								x = new CosExpression(x);
+							}
+							else if (unaryCode == 5)
+							{
+								x = new TanExpression(x);
+							}
+						}
+						this.parseList.Add(x);
+					}
+					else if (unaryCode == 2)
+					{
+						x = new RootExpression(termExpr);
+						while (unaryStack.Count > 1)
+						{
+							unaryCode = unaryStack.Pop();
+							if (unaryCode == 1)
+							{
+								x = new NegativeExpression(x);
+							}
+							else if (unaryCode == 2)
+							{
+								x = new RootExpression(x);
+							}
+							else if (unaryCode == 3)
+							{
+								x = new SinExpression(x);
+							}
+							else if (unaryCode == 4)
+							{
+								x = new CosExpression(x);
+							}
+							else if (unaryCode == 5)
+							{
+								x = new TanExpression(x);
+							}
+						}
+						this.parseList.Add(x);
+					}
+					else if (unaryCode == 3)
+					{
+						x = new SinExpression(termExpr);
+						while (unaryStack.Count > 1)
+						{
+							unaryCode = unaryStack.Pop();
+							if (unaryCode == 1)
+							{
+								x = new NegativeExpression(x);
+							}
+							else if (unaryCode == 2)
+							{
+								x = new RootExpression(x);
+							}
+							else if (unaryCode == 3)
+							{
+								x = new SinExpression(x);
+							}
+							else if (unaryCode == 4)
+							{
+								x = new CosExpression(x);
+							}
+							else if (unaryCode == 5)
+							{
+								x = new TanExpression(x);
+							}
+						}
+						this.parseList.Add(x);
+					}
+					else if (unaryCode == 4)
+					{
+						x = new CosExpression(termExpr);
+						while (unaryStack.Count > 1)
+						{
+							unaryCode = unaryStack.Pop();
+							if (unaryCode == 1)
+							{
+								x = new NegativeExpression(x);
+							}
+							else if (unaryCode == 2)
+							{
+								x = new RootExpression(x);
+							}
+							else if (unaryCode == 3)
+							{
+								x = new SinExpression(x);
+							}
+							else if (unaryCode == 4)
+							{
+								x = new CosExpression(x);
+							}
+							else if (unaryCode == 5)
+							{
+								x = new TanExpression(x);
+							}
+						}
+						this.parseList.Add(x);
+					}
+					else if (unaryCode == 5)
+					{
+						x = new TanExpression(termExpr);
+						while (unaryStack.Count > 1)
+						{
+							unaryCode = unaryStack.Pop();
+							if (unaryCode == 1)
+							{
+								x = new NegativeExpression(x);
+							}
+							else if (unaryCode == 2)
+							{
+								x = new RootExpression(x);
+							}
+							else if (unaryCode == 3)
+							{
+								x = new SinExpression(x);
+							}
+							else if (unaryCode == 4)
+							{
+								x = new CosExpression(x);
+							}
+							else if (unaryCode == 5)
+							{
+								x = new TanExpression(x);
+							}
+						}
+						this.parseList.Add(x);
+					}
 				}
 				if (!isUnary)
 				{
 					this.parseList.Add(termExpr);
 				}
-				isRoot = false;
+				//isRoot = false;
+				firstNum = false;
 				isTrigonometry = "";
 				isNegative = false;
 				isNum = false;
