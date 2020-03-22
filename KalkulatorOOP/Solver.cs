@@ -214,7 +214,6 @@ namespace Solver
                 BinaryExpression Appointment = new AppointmentExpression(val1, val2);
                 return Appointment;
             }
-            else { throw new Exception(); }
         }
 
         public Expression applyOp(Expression op, Expression val)
@@ -239,7 +238,6 @@ namespace Solver
                 UnaryExpression Tan = new TanExpression(val);
                 return Tan;
             }
-            else { throw new Exception(); }
         }
 
         public double getAns()
