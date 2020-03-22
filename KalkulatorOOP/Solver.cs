@@ -99,8 +99,15 @@ namespace Solver
 
                 Expression op = this.Operator_Stack.Peek();
                 this.Operator_Stack.Pop();
-
-                this.Value_Stack.Push(applyOp(Expr1, op, Expr2));
+                
+                if (((Operator)op).GetOp() == '/' && Expr2.Solve() == 0)
+                {
+                    throw new DivisionByZeroException();
+                } 
+                else
+                {
+                    this.Value_Stack.Push(applyOp(Expr1, op, Expr2));
+                }
             }
             else if (isUnaryOperator(this.Value_Stack.Peek()))
             {
@@ -130,16 +137,16 @@ namespace Solver
         // Function to find precedence of operators. 
         public int precedence(Expression Expr)
         {
-            if (Expr.Solve() == '+' || Expr.Solve() == '-')
+            if (((Operator)Expr).GetOp() == '+' || ((Operator)Expr).GetOp() == '-')
             {
                 return 1;
             }
-            else if (Expr.Solve() == '*' || Expr.Solve() == '/')
+            else if (((Operator)Expr).GetOp() == '*' || ((Operator)Expr).GetOp() == '/')
             {
                 return 2;
             }
-            else if (Expr.Solve() == '^' || Expr.Solve() == '√'
-                  || Expr.Solve().Equals("sin") || Expr.Solve().Equals("cos") || Expr.Solve().Equals("tan"))
+            else if (((Operator)Expr).GetOp() == '^' || ((Operator)Expr).GetOp() == '√'
+                  || ((Operator)Expr).GetOp().Equals("sin") || ((Operator)Expr).GetOp().Equals("cos") || ((Operator)Expr).GetOp().Equals("tan"))
             {
                 return 3;
             }
@@ -169,37 +176,37 @@ namespace Solver
         }
         public bool isLeftBracketExpr(Expression Expr)
         {
-            return (Expr.GetType().ToString().Equals("RootExpression") && Expr.Solve() == '(');
+            return (Expr.GetType().ToString().Equals("RootExpression") && ((Operator)Expr).GetOp() == '(');
         }
         public bool isRightBracketExpr(Expression Expr)
         {
-            return (Expr.GetType().ToString().Equals("RootExpression") && Expr.Solve() == ')');
+            return (Expr.GetType().ToString().Equals("RootExpression") && ((Operator)Expr).GetOp() == ')');
         }
 
         // Function to perform arithmetic operations. 
         public Expression applyOp(Expression val1, Expression op, Expression val2)
         {
-            if (op.Solve() == '+')
+            if (((Operator)op).GetOp() == '+')
             {
                 BinaryExpression Add = new AddExpression(val1, val2);
                 return Add;
             }
-            else if (op.Solve() == '-')
+            else if (((Operator)op).GetOp() == '-')
             {
                 BinaryExpression Substract = new SubstractExpression(val1, val2);
                 return Substract;
             }
-            else if (op.Solve() == '*')
+            else if (((Operator)op).GetOp() == '*')
             {
                 BinaryExpression Multiply = new MultiplyExpression(val1, val2);
                 return Multiply;
             }
-            else if (op.Solve() == '/')
+            else if (((Operator)op).GetOp() == '/')
             {
                 BinaryExpression Division = new DivisionExpression(val1, val2);
                 return Division;
             }
-            else if (op.Solve() == '^')
+            else
             {
                 BinaryExpression Appointment = new AppointmentExpression(val1, val2);
                 return Appointment;
