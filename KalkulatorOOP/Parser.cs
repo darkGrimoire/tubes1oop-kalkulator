@@ -6,7 +6,7 @@ using KalkulatorOOP;
 // ASUMSI: Unary Expression dibuat di Parser.
 public class Parser
 {
-	List<Expression> parseList;
+	List<Expression> parseList = new List<Expression>();
 	public Parser(string token)
 	{
 		int i = 0;
