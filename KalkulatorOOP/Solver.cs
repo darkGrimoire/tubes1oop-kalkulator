@@ -145,8 +145,11 @@ namespace Solver
             {
                 return 2;
             }
-            else if (((Operator)Expr).GetOp() == '^' || ((Operator)Expr).GetOp() == '√'
-                  || ((Operator)Expr).GetOp().Equals("sin") || ((Operator)Expr).GetOp().Equals("cos") || ((Operator)Expr).GetOp().Equals("tan"))
+            else if (((Operator)Expr).GetOp() == '^' 
+                  || Expr.GetType().ToString().Equals("RootExpression")
+                  || Expr.GetType().ToString().Equals("SinExpression") 
+                  || Expr.GetType().ToString().Equals("CosExpression") 
+                  || Expr.GetType().ToString().Equals("TanExpression"))
             {
                 return 3;
             }
@@ -206,7 +209,7 @@ namespace Solver
                 BinaryExpression Division = new DivisionExpression(val1, val2);
                 return Division;
             }
-            else
+            else /*if (((Operator)op).GetOp() == '^')*/
             {
                 BinaryExpression Appointment = new AppointmentExpression(val1, val2);
                 return Appointment;
@@ -215,22 +218,22 @@ namespace Solver
 
         public Expression applyOp(Expression op, Expression val)
         {
-            if (op.Solve() == '√')
+            if (op.GetType().ToString().Equals("RootExpression"))
             {
                 UnaryExpression Root = new RootExpression(val);
                 return Root;
             }
-            else if (op.Solve().Equals("sin"))
+            else if (op.GetType().ToString().Equals("SinExpression"))
             {
                 UnaryExpression Sin = new SinExpression(val);
                 return Sin;
             }
-            else if (op.Solve().Equals("cos"))
+            else if (op.GetType().ToString().Equals("CosExpression"))
             {
                 UnaryExpression Cos = new CosExpression(val);
                 return Cos;
             }
-            else if (op.Solve().Equals("tan"))
+            else /*if (op.GetType().ToString().Equals("TanExpression"))*/
             {
                 UnaryExpression Tan = new TanExpression(val);
                 return Tan;
