@@ -7,8 +7,8 @@ using System.Collections;
 using CalculatorException;
 using KalkulatorOOP;
 
-namespace Solver
-{
+//namespace Solver
+//{
     class Solver
     {
         /*Kamus Data*/
@@ -245,4 +245,4 @@ namespace Solver
             return this.Ans;
         }
     }
-}
+//}

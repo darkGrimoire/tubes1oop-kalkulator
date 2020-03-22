@@ -57,6 +57,8 @@
             this.buttonCos = new System.Windows.Forms.Button();
             this.buttonTan = new System.Windows.Forms.Button();
             this.buttonPangkat = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox
@@ -65,7 +67,7 @@
             this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.textBox.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox.Location = new System.Drawing.Point(79, 25);
+            this.textBox.Location = new System.Drawing.Point(73, 77);
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(664, 68);
             this.textBox.TabIndex = 0;
@@ -80,7 +82,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(273, 247);
+            this.button1.Location = new System.Drawing.Point(267, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 55);
             this.button1.TabIndex = 1;
@@ -98,7 +100,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(373, 247);
+            this.button2.Location = new System.Drawing.Point(367, 315);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 55);
             this.button2.TabIndex = 2;
@@ -116,7 +118,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button3.Location = new System.Drawing.Point(473, 247);
+            this.button3.Location = new System.Drawing.Point(467, 315);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 55);
             this.button3.TabIndex = 3;
@@ -134,7 +136,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button4.Location = new System.Drawing.Point(273, 182);
+            this.button4.Location = new System.Drawing.Point(267, 250);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 55);
             this.button4.TabIndex = 4;
@@ -152,7 +154,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button5.Location = new System.Drawing.Point(373, 182);
+            this.button5.Location = new System.Drawing.Point(367, 250);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 55);
             this.button5.TabIndex = 5;
@@ -170,7 +172,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button6.Location = new System.Drawing.Point(473, 182);
+            this.button6.Location = new System.Drawing.Point(467, 250);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 55);
             this.button6.TabIndex = 6;
@@ -188,7 +190,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button7.Location = new System.Drawing.Point(273, 117);
+            this.button7.Location = new System.Drawing.Point(267, 185);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 55);
             this.button7.TabIndex = 7;
@@ -206,7 +208,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button8.Location = new System.Drawing.Point(373, 117);
+            this.button8.Location = new System.Drawing.Point(367, 185);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 55);
             this.button8.TabIndex = 8;
@@ -224,7 +226,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button9.Location = new System.Drawing.Point(473, 117);
+            this.button9.Location = new System.Drawing.Point(467, 185);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 55);
             this.button9.TabIndex = 9;
@@ -242,7 +244,7 @@
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button0.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button0.Location = new System.Drawing.Point(373, 312);
+            this.button0.Location = new System.Drawing.Point(367, 380);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(75, 55);
             this.button0.TabIndex = 10;
@@ -260,7 +262,7 @@
             this.buttonSD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSD.Font = new System.Drawing.Font("VCR OSD Mono", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonSD.Location = new System.Drawing.Point(583, 247);
+            this.buttonSD.Location = new System.Drawing.Point(577, 315);
             this.buttonSD.Name = "buttonSD";
             this.buttonSD.Size = new System.Drawing.Size(75, 120);
             this.buttonSD.TabIndex = 11;
@@ -278,7 +280,7 @@
             this.buttonT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonT.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonT.Location = new System.Drawing.Point(473, 312);
+            this.buttonT.Location = new System.Drawing.Point(467, 380);
             this.buttonT.Name = "buttonT";
             this.buttonT.Size = new System.Drawing.Size(75, 55);
             this.buttonT.TabIndex = 12;
@@ -296,7 +298,7 @@
             this.buttonPLUS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPLUS.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPLUS.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonPLUS.Location = new System.Drawing.Point(668, 247);
+            this.buttonPLUS.Location = new System.Drawing.Point(662, 315);
             this.buttonPLUS.Name = "buttonPLUS";
             this.buttonPLUS.Size = new System.Drawing.Size(75, 55);
             this.buttonPLUS.TabIndex = 13;
@@ -314,7 +316,7 @@
             this.buttonMINUS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMINUS.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMINUS.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonMINUS.Location = new System.Drawing.Point(668, 312);
+            this.buttonMINUS.Location = new System.Drawing.Point(662, 380);
             this.buttonMINUS.Name = "buttonMINUS";
             this.buttonMINUS.Size = new System.Drawing.Size(75, 55);
             this.buttonMINUS.TabIndex = 14;
@@ -332,7 +334,7 @@
             this.buttonMulti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMulti.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMulti.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonMulti.Location = new System.Drawing.Point(583, 182);
+            this.buttonMulti.Location = new System.Drawing.Point(577, 250);
             this.buttonMulti.Name = "buttonMulti";
             this.buttonMulti.Size = new System.Drawing.Size(75, 55);
             this.buttonMulti.TabIndex = 15;
@@ -350,7 +352,7 @@
             this.buttonBAGI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBAGI.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBAGI.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonBAGI.Location = new System.Drawing.Point(668, 182);
+            this.buttonBAGI.Location = new System.Drawing.Point(662, 250);
             this.buttonBAGI.Name = "buttonBAGI";
             this.buttonBAGI.Size = new System.Drawing.Size(75, 55);
             this.buttonBAGI.TabIndex = 16;
@@ -368,7 +370,7 @@
             this.buttonAkar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAkar.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAkar.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonAkar.Location = new System.Drawing.Point(163, 182);
+            this.buttonAkar.Location = new System.Drawing.Point(157, 250);
             this.buttonAkar.Name = "buttonAkar";
             this.buttonAkar.Size = new System.Drawing.Size(75, 55);
             this.buttonAkar.TabIndex = 17;
@@ -386,7 +388,7 @@
             this.buttonAns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAns.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAns.ForeColor = System.Drawing.Color.Red;
-            this.buttonAns.Location = new System.Drawing.Point(163, 117);
+            this.buttonAns.Location = new System.Drawing.Point(157, 185);
             this.buttonAns.Name = "buttonAns";
             this.buttonAns.Size = new System.Drawing.Size(75, 55);
             this.buttonAns.TabIndex = 18;
@@ -404,7 +406,7 @@
             this.buttonMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMC.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMC.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.buttonMC.Location = new System.Drawing.Point(78, 117);
+            this.buttonMC.Location = new System.Drawing.Point(72, 185);
             this.buttonMC.Name = "buttonMC";
             this.buttonMC.Size = new System.Drawing.Size(75, 55);
             this.buttonMC.TabIndex = 19;
@@ -422,7 +424,7 @@
             this.buttonMR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMR.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMR.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.buttonMR.Location = new System.Drawing.Point(78, 182);
+            this.buttonMR.Location = new System.Drawing.Point(72, 250);
             this.buttonMR.Name = "buttonMR";
             this.buttonMR.Size = new System.Drawing.Size(75, 55);
             this.buttonMR.TabIndex = 20;
@@ -440,7 +442,7 @@
             this.buttonCLEAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCLEAR.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCLEAR.ForeColor = System.Drawing.Color.Red;
-            this.buttonCLEAR.Location = new System.Drawing.Point(273, 312);
+            this.buttonCLEAR.Location = new System.Drawing.Point(267, 380);
             this.buttonCLEAR.Name = "buttonCLEAR";
             this.buttonCLEAR.Size = new System.Drawing.Size(75, 55);
             this.buttonCLEAR.TabIndex = 21;
@@ -458,7 +460,7 @@
             this.buttonBK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBK.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBK.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonBK.Location = new System.Drawing.Point(583, 117);
+            this.buttonBK.Location = new System.Drawing.Point(577, 185);
             this.buttonBK.Name = "buttonBK";
             this.buttonBK.Size = new System.Drawing.Size(75, 55);
             this.buttonBK.TabIndex = 22;
@@ -476,7 +478,7 @@
             this.buttonTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTK.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTK.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonTK.Location = new System.Drawing.Point(668, 117);
+            this.buttonTK.Location = new System.Drawing.Point(662, 185);
             this.buttonTK.Name = "buttonTK";
             this.buttonTK.Size = new System.Drawing.Size(75, 55);
             this.buttonTK.TabIndex = 23;
@@ -494,7 +496,7 @@
             this.buttonSin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSin.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSin.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonSin.Location = new System.Drawing.Point(78, 247);
+            this.buttonSin.Location = new System.Drawing.Point(72, 315);
             this.buttonSin.Name = "buttonSin";
             this.buttonSin.Size = new System.Drawing.Size(75, 55);
             this.buttonSin.TabIndex = 24;
@@ -512,7 +514,7 @@
             this.buttonCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCos.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCos.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonCos.Location = new System.Drawing.Point(78, 312);
+            this.buttonCos.Location = new System.Drawing.Point(72, 380);
             this.buttonCos.Name = "buttonCos";
             this.buttonCos.Size = new System.Drawing.Size(75, 55);
             this.buttonCos.TabIndex = 25;
@@ -530,7 +532,7 @@
             this.buttonTan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTan.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTan.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonTan.Location = new System.Drawing.Point(163, 312);
+            this.buttonTan.Location = new System.Drawing.Point(157, 380);
             this.buttonTan.Name = "buttonTan";
             this.buttonTan.Size = new System.Drawing.Size(75, 55);
             this.buttonTan.TabIndex = 26;
@@ -548,13 +550,40 @@
             this.buttonPangkat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPangkat.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPangkat.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonPangkat.Location = new System.Drawing.Point(163, 247);
+            this.buttonPangkat.Location = new System.Drawing.Point(157, 315);
             this.buttonPangkat.Name = "buttonPangkat";
             this.buttonPangkat.Size = new System.Drawing.Size(75, 55);
             this.buttonPangkat.TabIndex = 27;
             this.buttonPangkat.Text = "^";
             this.buttonPangkat.UseVisualStyleBackColor = false;
             this.buttonPangkat.Click += new System.EventHandler(this.buttonPangkat_Click);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.buttonClose.Location = new System.Drawing.Point(767, 6);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(42, 34);
+            this.buttonClose.TabIndex = 28;
+            this.buttonClose.Text = "X";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("VCR OSD Mono", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(13, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 17);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Kalkulator";
             // 
             // Form1
             // 
@@ -563,7 +592,9 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(816, 428);
+            this.ClientSize = new System.Drawing.Size(816, 495);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonPangkat);
             this.Controls.Add(this.buttonTan);
             this.Controls.Add(this.buttonCos);
@@ -592,12 +623,13 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Kalkulator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -633,6 +665,8 @@
         private System.Windows.Forms.Button buttonCos;
         private System.Windows.Forms.Button buttonTan;
         private System.Windows.Forms.Button buttonPangkat;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using CalculatorException;
 
-namespace KalkulatorOOP
-{
+//namespace KalkulatorOOP
+//{
     public class MCMRQueue<T> : Queue<T>
     {
         private int maxElmt;
@@ -48,4 +48,4 @@ namespace KalkulatorOOP
             }
         }
     }
-}
+//}

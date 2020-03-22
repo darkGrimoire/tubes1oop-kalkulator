@@ -4,9 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CalculatorException;
+using KalkulatorOOP;
 
-namespace KalkulatorOOP
-{
+//namespace KalkulatorOOP
+//{
     static class Program
     {
         /// <summary>
@@ -14,10 +15,15 @@ namespace KalkulatorOOP
         /// </summary>
         [STAThread]
         static void Main()
-        {   
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+        {
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
+
+            //---DEBUGGING CONSOLE HERE---//
+
+            Parser parser = new Parser("3--4");
+            parser.Peek();
         }
     }
-}
+//}
