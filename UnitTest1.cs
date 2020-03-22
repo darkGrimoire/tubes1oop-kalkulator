@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CalculatorException;
 
@@ -304,6 +304,83 @@ namespace KalkulatorTester
             TanExpression tan = new TanExpression(new TerminalExpression(Math.PI / 4));
 
             Assert.AreEqual(1, tan.Solve(), 0.001);
+        }
+    }
+
+    [TestClass]
+    public class ParserUnitTest
+    {
+        [TestMethod]
+        public void ParserTest()
+        {
+            Parser parser = new Parser("?3+2");
+        }
+    }
+
+    [TestClass]
+    public class SolverUnitTest
+    {
+        [TestMethod]
+        public void solverTest1()
+        {
+            Parser parser = new Parser("3+2");
+            double ans = parser.Solve();
+
+            Assert.AreEqual(5, ans, 0.0001);
+        }
+
+        [TestMethod]
+        public void solverTest2()
+        {
+            Parser parser = new Parser("-3-2");
+            double ans = parser.Solve();
+
+            Assert.AreEqual(-5, ans, 0.0001);
+        }
+
+        [TestMethod]
+        public void solverTest3()
+        {
+            Parser parser = new Parser("3--4");
+            double ans = parser.Solve();
+
+            Assert.AreEqual(7, ans, 0.0001);
+        }
+
+        [TestMethod]
+        public void solverTest4()
+        {
+            Parser parser = new Parser("3+-4");
+            double ans = parser.Solve();
+
+            Assert.AreEqual(-1, ans, 0.0001);
+        }
+
+        [TestMethod]
+        public void solverTest5()
+        {
+            Parser parser = new Parser("√4+2");
+            double ans = parser.Solve();
+
+            Assert.AreEqual(4, ans, 0.0001);
+        }
+
+        [TestMethod]
+        public void solverTest6()
+        {
+            Parser parser = new Parser("(3+2)");
+            double ans = parser.Solve();
+
+            Assert.AreEqual(5, ans, 0.0001);
+        }
+
+        [TestMethod]
+        public void solverTest7()
+        {
+            Parser parser = new Parser("√4+(3-2)*-2");
+            double ans = parser.Solve();
+
+            Assert.AreEqual(0, ans, 0.0001);
         }
     }
     
