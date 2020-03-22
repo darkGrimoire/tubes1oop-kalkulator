@@ -6,7 +6,7 @@ using KalkulatorOOP;
 // ASUMSI: Unary Expression dibuat di Parser.
 public class Parser
 {
-	List<Expression> parseList;
+	List<Expression> parseList = new List<Expression>();
 	public Parser(string token)
 	{
 		int i = 0;
@@ -16,29 +16,42 @@ public class Parser
 		string isTrigonometry = "";
 		bool isNum = false;
 		bool isUnary = false;
+		string debug = "";
+		bool hasPassedOperator = false;
+		bool hasPassedNum = false;
 		StringBuilder buffer = new StringBuilder("");
 		while (i < token.Length)
 		{
+			debug = token[i].ToString();
 			// If token is a whitespace, skip it
 			if (token[i] == ' ') {/*continue*/}
 			// If token is unary expression (-, √), make the empty Unary Expression
-			else if (token[i] == '-' || token[i] == '√')
+			else if ((token[i] == '-' || token[i] == '√') && !hasPassedNum)
 			{
-				if (token[i] == '-')
+				if (hasPassedOperator || i == 0)
 				{
-					//UnaryExpression unaryOp = new NegativeExpression();
-					isNegative = true;
+					if (token[i] == '-')
+					{
+						//UnaryExpression unaryOp = new NegativeExpression();
+						isNegative = true;
+					}
+					else
+					{
+						//UnaryExpression unaryOp = new RootExpression();
+						isRoot = true;
+					}
+					hasPassedOperator = false;
 				}
 				else
 				{
-					//UnaryExpression unaryOp = new RootExpression();
-					isRoot = true;
+
 				}
 			}
 			// If token is trigonometry unary expression, make the empty Unary Expression
-			else if (token.Substring(i, 3).Equals("sin")
-				  || token.Substring(i, 3).Equals("cos")
-				  || token.Substring(i, 3).Equals("tan"))
+			else if (token[i] == 's' || token[i] == 'c' || token[i] == 't')
+			//else if (token.Substring(i, 3).Equals("sin")
+			//	  || token.Substring(i, 3).Equals("cos")
+			//	  || token.Substring(i, 3).Equals("tan"))
 			{
 				//UnaryExpression unaryOp = new TrigonometryExpression(token.Substring(i, 3));
 				isTrigonometry = token.Substring(i, 3);
@@ -50,6 +63,8 @@ public class Parser
 			{
 				Operator op = new Operator(token[i]);
 				parseList.Add(op);
+				hasPassedOperator = true;
+				hasPassedNum = false;
 			}
 			// If token is a number, parse it
 			else if (token[i] >= '0' && token[i] <= '9')
@@ -60,6 +75,7 @@ public class Parser
 					buffer.Append(token[i]);
 					i++;
 				}
+				i--;
 			}
 			// If token is a .number, parse it too
 			else if (token[i] == '.')
@@ -72,6 +88,7 @@ public class Parser
 					buffer.Append(token[i]);
 					i++;
 				}
+				i--;
 			}
 			if (isNum)
 			{
@@ -110,8 +127,26 @@ public class Parser
 				isNegative = false;
 				isNum = false;
 				isUnary = false;
+				buffer.Clear();
+				hasPassedNum = true;
 			}
 			i++;
 		}
+		//Solver solve = new Solver(parseList);
+	}
+
+	public void Peek()
+	{
+		foreach (object o in parseList)
+		{
+			Console.WriteLine(o.GetType().ToString());
+		}
+	}
+
+	public double Solve()
+	{
+		Solver solve = new Solver(parseList);
+		solve.Solve();
+		return solve.getAns();
 	}
 }

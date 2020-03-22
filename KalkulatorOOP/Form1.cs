@@ -1,11 +1,4 @@
-﻿
-
-
-
-
-
-using System;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,53 +12,156 @@ namespace KalkulatorOOP
 {
     public partial class Form1 : Form
     {
+        // VARIABLES
+        double ans = 0;
+        bool hasPassedOperator = false;
+        bool hasPassedNegative = false;
+        bool hasPassedNum = false;
+        bool hasPassedPoint = false;
+        bool hasPassedUnary = false;
+        int semaphore = 0;
+
         public Form1(){
             InitializeComponent();
         }
         private void button1_Click(object sender, EventArgs e){
             this.textBox.Text += button1.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button2_Click(object sender, EventArgs e){
             this.textBox.Text += button2.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button3_Click(object sender, EventArgs e){
             this.textBox.Text += button3.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button4_Click(object sender, EventArgs e){
             this.textBox.Text += button4.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button5_Click(object sender, EventArgs e) {
             this.textBox.Text += button5.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button6_Click(object sender, EventArgs e){
             this.textBox.Text += button6.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button7_Click(object sender, EventArgs e){
             this.textBox.Text += button7.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button8_Click(object sender, EventArgs e) {
             this.textBox.Text += button8.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button9_Click(object sender, EventArgs e){
             this.textBox.Text += button9.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void button0_Click(object sender, EventArgs e){
             this.textBox.Text += button0.Text;
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            hasPassedNegative = false;
         }
         private void buttonT_Click(object sender, EventArgs e){
-            this.textBox.Text += buttonT.Text;
+            if (!hasPassedPoint)
+            {
+                this.textBox.Text += buttonT.Text;
+                hasPassedPoint = true;
+            }
         }
         private void buttonPLUS_Click(object sender, EventArgs e){
-            this.textBox.Text += buttonPLUS.Text;
+            if (hasPassedNegative)
+            {
+                // do nothing
+            }
+            else if (hasPassedOperator)
+            {
+                this.textBox.Text = textBox.Text.Substring(0, textBox.Text.Length - 1);
+                this.textBox.Text += buttonPLUS.Text;
+            }
+            else
+            {
+                this.textBox.Text += buttonPLUS.Text;
+                hasPassedOperator = true;
+                hasPassedNum = false;
+                hasPassedPoint = false;
+            }
         }
         private void buttonMINUS_Click(object sender, EventArgs e){
-            this.textBox.Text += buttonMINUS.Text;
+            if (hasPassedNegative)
+            {
+                // do nothing
+            }
+            else if (hasPassedOperator && ! hasPassedNegative)
+            {
+                this.textBox.Text += buttonMINUS.Text;
+                hasPassedNegative = true;
+            }
+            else
+            {
+                this.textBox.Text += buttonMINUS.Text;
+                hasPassedOperator = true;
+                hasPassedNum = false;
+                hasPassedPoint = false;
+            }
         }
         private void buttonMulti_Click(object sender, EventArgs e){
-            this.textBox.Text += buttonMulti.Text;
+            if (hasPassedNegative)
+            {
+                // do nothing
+            }
+            else if (hasPassedOperator)
+            {
+                this.textBox.Text = textBox.Text.Substring(0, textBox.Text.Length - 1);
+                this.textBox.Text += buttonMulti.Text;
+            }
+            else
+            {
+                this.textBox.Text += buttonMulti.Text;
+                hasPassedOperator = true;
+                hasPassedNum = false;
+                hasPassedPoint = false;
+            }
         }
         private void buttonBAGI_Click(object sender, EventArgs e){
-            this.textBox.Text += buttonBAGI.Text;
+            if (hasPassedNegative)
+            {
+                // do nothing
+            }
+            else if (hasPassedOperator)
+            {
+                this.textBox.Text = textBox.Text.Substring(0, textBox.Text.Length - 1);
+                this.textBox.Text += buttonBAGI.Text;
+            }
+            else
+            {
+                this.textBox.Text += buttonBAGI.Text;
+                hasPassedOperator = true;
+                hasPassedNum = false;
+                hasPassedPoint = false;
+            }
         }
         private void buttonAkar_Click(object sender, EventArgs e){
             this.textBox.Text += buttonAkar.Text;
@@ -84,9 +180,14 @@ namespace KalkulatorOOP
         }
         private void buttonBK_Click(object sender, EventArgs e){
             this.textBox.Text += buttonBK.Text;
+            semaphore++;
         }
         private void buttonTK_Click(object sender, EventArgs e){
-            this.textBox.Text += buttonTK.Text;
+            if (semaphore > 0)
+            {
+                this.textBox.Text += buttonTK.Text;
+                semaphore--;
+            }
         }
         private void buttonPangkat_Click(object sender, EventArgs e){
             this.textBox.Text += buttonPangkat.Text;
@@ -101,12 +202,15 @@ namespace KalkulatorOOP
 
         }
         private void buttonSD_Click(object sender, EventArgs e){
-
+            Parser parseExpression = new Parser(textBox.Text);
+            ans = parseExpression.Solve();
+            textBox.Clear();
+            textBox.Text = ans.ToString();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

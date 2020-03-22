@@ -20,7 +20,7 @@ namespace CalculatorException
     public class NegativeRootException : Exception
     {
         private double realNumber;
-        NegativeRootException(int num)
+        public NegativeRootException(double num)
         {
             this.realNumber = num;
         }
