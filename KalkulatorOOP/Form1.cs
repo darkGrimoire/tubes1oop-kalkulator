@@ -65,6 +65,7 @@ namespace KalkulatorOOP
             this.textBox.Text += button6.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
+            hasFirstClick = true;
             hasPassedNegative = false;
         }
         private void button7_Click(object sender, EventArgs e){
