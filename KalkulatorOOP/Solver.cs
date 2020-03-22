@@ -86,41 +86,6 @@ using KalkulatorOOP;
             this.Ans = this.Value_Stack.Peek().Solve(); //NOTE:GetValuenya
             return this.Ans;
         }
-        /*
-        void Old_PopPopApplyPush()
-        {
-            if (isBinaryOperator(this.Operator_Stack.Peek()))
-            {
-                Expression Expr2 = this.Value_Stack.Peek();
-                this.Value_Stack.Pop();
-
-                Expression Expr1 = this.Value_Stack.Peek();
-                this.Value_Stack.Pop();
-
-                Expression op = this.Operator_Stack.Peek();
-                this.Operator_Stack.Pop();
-                
-                if (((Operator)op).GetOp() == '/' && Expr2.Solve() == 0)
-                {
-                    throw new DivisionByZeroException();
-                } 
-                else
-                {
-                    this.Value_Stack.Push(applyOp(Expr1, op, Expr2));
-                }
-            }
-            else if (isUnaryOperator(this.Operator_Stack.Peek()))
-            {
-                Expression Expr1 = this.Value_Stack.Peek();
-                this.Value_Stack.Pop();
-
-                Expression op = this.Operator_Stack.Peek();
-                this.Operator_Stack.Pop();
-
-                this.Value_Stack.Push(applyOp(op, Expr1));
-            }
-        }
-        */
 
         void PopPopApplyPush()
         {
@@ -193,18 +158,6 @@ using KalkulatorOOP;
             }
         }
 
-        /*
-        public bool isBinaryOperator(Expression Expr)
-        {
-            return (Expr.GetType().ToString().Equals("BinaryExpression")
-                 || Expr.GetType().ToString().Equals("AddExpression")
-                 || Expr.GetType().ToString().Equals("SubstractExpression")
-                 || Expr.GetType().ToString().Equals("MultiplyExpression")
-                 || Expr.GetType().ToString().Equals("DivisionExpression")
-                 || Expr.GetType().ToString().Equals("AppointmentExpression"));
-        }
-        */
-
         public bool isUnaryExpression(Expression Expr)
         {
             return (Expr.GetType().ToString().Equals("UnaryExpression")
@@ -216,11 +169,11 @@ using KalkulatorOOP;
         }
         public bool isLeftBracketExpr(Expression Expr)
         {
-            return (Expr.GetType().ToString().Equals("RootExpression") && ((Operator)Expr).GetOp() == '(');
+            return (isOperator(Expr) && ((Operator)Expr).GetOp() == '(');
         }
         public bool isRightBracketExpr(Expression Expr)
         {
-            return (Expr.GetType().ToString().Equals("RootExpression") && ((Operator)Expr).GetOp() == ')');
+            return (isOperator(Expr) && ((Operator)Expr).GetOp() == ')');
         }
 
         // Function to perform arithmetic operations. 
@@ -253,32 +206,6 @@ using KalkulatorOOP;
             }
         }
 
-        /*
-        public Expression applyOp(Expression op, Expression val)
-        {
-            if (op.GetType().ToString().Equals("RootExpression"))
-            {
-                UnaryExpression Root = new RootExpression(val);
-                return Root;
-            }
-            else if (op.GetType().ToString().Equals("SinExpression"))
-            {
-                UnaryExpression Sin = new SinExpression(val);
-                return Sin;
-            }
-            else if (op.GetType().ToString().Equals("CosExpression"))
-            {
-                UnaryExpression Cos = new CosExpression(val);
-                return Cos;
-            }
-            else /*if (op.GetType().ToString().Equals("TanExpression"))*/
-            /*
-            {
-                UnaryExpression Tan = new TanExpression(val);
-                return Tan;
-            }
-        }
-        */
         public double getAns()
         {
             return this.Ans;
