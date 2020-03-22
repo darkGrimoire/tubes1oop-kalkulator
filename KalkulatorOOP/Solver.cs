@@ -86,10 +86,10 @@ using KalkulatorOOP;
             this.Ans = this.Value_Stack.Peek().Solve(); //NOTE:GetValuenya
             return this.Ans;
         }
-
-        void PopPopApplyPush()
+        /*
+        void Old_PopPopApplyPush()
         {
-            if (isBinaryOperator(this.Value_Stack.Peek()))
+            if (isBinaryOperator(this.Operator_Stack.Peek()))
             {
                 Expression Expr2 = this.Value_Stack.Peek();
                 this.Value_Stack.Pop();
@@ -109,7 +109,7 @@ using KalkulatorOOP;
                     this.Value_Stack.Push(applyOp(Expr1, op, Expr2));
                 }
             }
-            else if (isUnaryOperator(this.Value_Stack.Peek()))
+            else if (isUnaryOperator(this.Operator_Stack.Peek()))
             {
                 Expression Expr1 = this.Value_Stack.Peek();
                 this.Value_Stack.Pop();
@@ -118,6 +118,40 @@ using KalkulatorOOP;
                 this.Operator_Stack.Pop();
 
                 this.Value_Stack.Push(applyOp(op, Expr1));
+            }
+        }
+        */
+
+        void PopPopApplyPush()
+        {
+            Expression Expr2 = this.Value_Stack.Peek();
+            this.Value_Stack.Pop();
+
+            if (isUnaryExpression(Expr2))
+            {
+                TerminalExpression Term_Expr2 = new TerminalExpression(Expr2.Solve());
+                Expr2 = Term_Expr2;
+            }
+            
+            Expression Expr1 = this.Value_Stack.Peek();
+            this.Value_Stack.Pop();
+
+            if (isUnaryExpression(Expr1))
+            {
+                TerminalExpression Term_Expr1 = new TerminalExpression(Expr1.Solve());
+                Expr1 = Term_Expr1;
+            }
+
+            Expression op = this.Operator_Stack.Peek();
+            this.Operator_Stack.Pop();
+
+            if (((Operator)op).GetOp() == '/' && Expr2.Solve() == 0)
+            {
+                throw new DivisionByZeroException();
+            }
+            else
+            {
+                this.Value_Stack.Push(applyOp(Expr1, op, Expr2));
             }
         }
 
@@ -159,6 +193,7 @@ using KalkulatorOOP;
             }
         }
 
+        /*
         public bool isBinaryOperator(Expression Expr)
         {
             return (Expr.GetType().ToString().Equals("BinaryExpression")
@@ -168,7 +203,9 @@ using KalkulatorOOP;
                  || Expr.GetType().ToString().Equals("DivisionExpression")
                  || Expr.GetType().ToString().Equals("AppointmentExpression"));
         }
-        public bool isUnaryOperator(Expression Expr)
+        */
+
+        public bool isUnaryExpression(Expression Expr)
         {
             return (Expr.GetType().ToString().Equals("UnaryExpression")
                  || Expr.GetType().ToString().Equals("TanExpression")
@@ -216,6 +253,7 @@ using KalkulatorOOP;
             }
         }
 
+        /*
         public Expression applyOp(Expression op, Expression val)
         {
             if (op.GetType().ToString().Equals("RootExpression"))
@@ -234,12 +272,13 @@ using KalkulatorOOP;
                 return Cos;
             }
             else /*if (op.GetType().ToString().Equals("TanExpression"))*/
+            /*
             {
                 UnaryExpression Tan = new TanExpression(val);
                 return Tan;
             }
         }
-
+        */
         public double getAns()
         {
             return this.Ans;
