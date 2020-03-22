@@ -12,6 +12,7 @@ namespace KalkulatorOOP
 {
     public partial class Form1 : Form
     {
+        MCMRQueue<double> queue = new MCMRQueue<double>();
         // VARIABLES
         double ans = 0;
         bool hasPassedOperator = false;
@@ -168,6 +169,7 @@ namespace KalkulatorOOP
         }
         private void buttonCLEAR_Click(object sender, EventArgs e){
             textBox.Clear();
+            queue.Clear();
         }
         private void buttonSin_Click(object sender, EventArgs e){
             this.textBox.Text += buttonSin.Text;
@@ -190,16 +192,37 @@ namespace KalkulatorOOP
             }
         }
         private void buttonPangkat_Click(object sender, EventArgs e){
-            this.textBox.Text += buttonPangkat.Text;
+            if (hasPassedNegative)
+            {
+                // do nothing
+            }
+            else if (hasPassedOperator)
+            {
+                this.textBox.Text = textBox.Text.Substring(0, textBox.Text.Length - 1);
+                this.textBox.Text += buttonPangkat.Text;
+            }
+            else
+            {
+                this.textBox.Text += buttonPangkat.Text;
+                hasPassedOperator = true;
+                hasPassedNum = false;
+                hasPassedPoint = false;
+            }
         }
         private void buttonAns_Click(object sender, EventArgs e){
-
+            ans = this.ans;
+            textBox.Clear();
+            this.textBox.Text = ans.ToString();
         }
         private void buttonMC_Click(object sender, EventArgs e){
-
+            queue.Push(Convert.ToDouble(textBox.Text));
         }
         private void buttonMR_Click(object sender, EventArgs e){
-
+            double mR;
+            mR = queue.Peek();
+            queue.Pop();
+            textBox.Clear();
+            this.textBox.Text = mR.ToString();
         }
         private void buttonSD_Click(object sender, EventArgs e){
             Parser parseExpression = new Parser(textBox.Text);
@@ -212,5 +235,6 @@ namespace KalkulatorOOP
         {
             this.Close();
         }
+
     }
 }
