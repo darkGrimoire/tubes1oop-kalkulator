@@ -58,7 +58,7 @@ public class Parser
 						unaryStack.Push(2);
 						isUnary = true;
 					}
-					hasPassedOperator = false;
+					//hasPassedOperator = false;
 				}
 				else
 				{
@@ -288,6 +288,7 @@ public class Parser
 				isUnary = false;
 				buffer.Clear();
 				hasPassedNum = true;
+				hasPassedOperator = false;
 			}
 			i++;
 		}
