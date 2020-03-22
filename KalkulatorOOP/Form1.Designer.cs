@@ -61,9 +61,13 @@
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(79, 60);
+            this.textBox.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.textBox.ForeColor = System.Drawing.SystemColors.Info;
+            this.textBox.Location = new System.Drawing.Point(79, 25);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(664, 26);
+            this.textBox.Size = new System.Drawing.Size(664, 68);
             this.textBox.TabIndex = 0;
             // 
             // button1
@@ -251,6 +255,8 @@
             this.buttonSD.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonSD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSD.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
+            this.buttonSD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.buttonSD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonSD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSD.Font = new System.Drawing.Font("VCR OSD Mono", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -443,15 +449,15 @@
             this.buttonCLEAR.Click += new System.EventHandler(this.buttonCLEAR_Click);
             // 
             // buttonBK
-            //
+            // 
             this.buttonBK.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonBK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBK.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
             this.buttonBK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonBK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonBK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBK.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBK.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonBK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBK.Location = new System.Drawing.Point(583, 117);
             this.buttonBK.Name = "buttonBK";
             this.buttonBK.Size = new System.Drawing.Size(75, 55);
@@ -463,13 +469,13 @@
             // buttonTK
             // 
             this.buttonTK.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonTK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonTK.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
             this.buttonTK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonTK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTK.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTK.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonTK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonTK.Location = new System.Drawing.Point(668, 117);
             this.buttonTK.Name = "buttonTK";
             this.buttonTK.Size = new System.Drawing.Size(75, 55);
@@ -481,13 +487,13 @@
             // buttonSin
             // 
             this.buttonSin.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonSin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSin.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
             this.buttonSin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonSin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonSin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSin.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSin.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonSin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSin.Location = new System.Drawing.Point(78, 247);
             this.buttonSin.Name = "buttonSin";
             this.buttonSin.Size = new System.Drawing.Size(75, 55);
@@ -497,15 +503,15 @@
             this.buttonSin.Click += new System.EventHandler(this.buttonSin_Click);
             // 
             // buttonCos
-            //
+            // 
             this.buttonCos.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonCos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCos.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
             this.buttonCos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonCos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCos.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCos.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonCos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCos.Location = new System.Drawing.Point(78, 312);
             this.buttonCos.Name = "buttonCos";
             this.buttonCos.Size = new System.Drawing.Size(75, 55);
@@ -517,13 +523,13 @@
             // buttonTan
             // 
             this.buttonTan.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonTan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonTan.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
             this.buttonTan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonTan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonTan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTan.Font = new System.Drawing.Font("VCR OSD Mono", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTan.ForeColor = System.Drawing.Color.HotPink;
-            this.buttonTan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonTan.Location = new System.Drawing.Point(163, 312);
             this.buttonTan.Name = "buttonTan";
             this.buttonTan.Size = new System.Drawing.Size(75, 55);
@@ -533,7 +539,7 @@
             this.buttonTan.Click += new System.EventHandler(this.buttonTan_Click);
             // 
             // buttonPangkat
-            //
+            // 
             this.buttonPangkat.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonPangkat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPangkat.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
@@ -554,7 +560,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 428);
@@ -592,7 +598,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
