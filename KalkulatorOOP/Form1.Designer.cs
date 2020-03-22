@@ -497,7 +497,7 @@
             // 
             // buttonTK
             // 
-            this.buttonTK.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonTK.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonTK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonTK.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
             this.buttonTK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
@@ -511,7 +511,7 @@
             this.buttonTK.Size = new System.Drawing.Size(75, 55);
             this.buttonTK.TabIndex = 23;
             this.buttonTK.Text = ")";
-            this.buttonTK.UseVisualStyleBackColor = true;
+            this.buttonTK.UseVisualStyleBackColor = false;
             this.buttonTK.Click += new System.EventHandler(this.buttonTK_Click);
             // 
             // buttonSin
