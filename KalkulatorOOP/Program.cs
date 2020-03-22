@@ -22,9 +22,13 @@ using KalkulatorOOP;
 
         //---DEBUGGING CONSOLE HERE---//
 
-        Parser parser = new Parser("-√3");
-        parser.Peek();
-        //Console.WriteLine(parser.Solve());
+        //Parser parser = new Parser("-√3");
+        //parser.Peek();
+        //TerminalExpression a = new TerminalExpression(4);
+        //UnaryExpression b = new RootExpression(a);
+        //UnaryExpression c = new NegativeExpression(b);
+
+        //Console.WriteLine(c.Solve());
     }
     }
 //}
