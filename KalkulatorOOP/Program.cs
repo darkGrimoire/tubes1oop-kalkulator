@@ -16,15 +16,15 @@ using KalkulatorOOP;
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new Form1());
 
-            //---DEBUGGING CONSOLE HERE---//
+        //---DEBUGGING CONSOLE HERE---//
 
-            Parser parser = new Parser("3+2");
-        //parser.Peek();
-        Console.WriteLine(parser.Solve());
-        }
+        //    Parser parser = new Parser("3+2");
+        ////parser.Peek();
+        //Console.WriteLine(parser.Solve());
+    }
     }
 //}
