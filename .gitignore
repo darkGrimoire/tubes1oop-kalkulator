@@ -1,13 +1,4 @@
 
-KalkulatorOOP/.vs/KalkulatorOOP/v16/.suo
-KalkulatorOOP/.vs/KalkulatorOOP/v16/Server/sqlite3/storage.ide-shm
-KalkulatorOOP/.vs/KalkulatorOOP/v16/Server/sqlite3/storage.ide-wal
-KalkulatorOOP/obj/Debug/DesignTimeResolveAssemblyReferences.cache
-KalkulatorOOP/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-KalkulatorOOP/obj/Debug/KalkulatorOOP.csproj.CoreCompileInputs.cache
-KalkulatorOOP/obj/Debug/KalkulatorOOP.csproj.FileListAbsolute.txt
-KalkulatorOOP/obj/Debug/KalkulatorOOP.csproj.GenerateResource.cache
-KalkulatorOOP/obj/Debug/KalkulatorOOP.csprojAssemblyReference.cache
-KalkulatorOOP/obj/Debug/KalkulatorOOP.exe
-KalkulatorOOP/obj/Debug/KalkulatorOOP.Form1.resources
-KalkulatorOOP/obj/Debug/KalkulatorOOP.pdb
+.vs/**
+KalkulatorOOP/.vs/**
+KalkulatorOOP/obj/**
