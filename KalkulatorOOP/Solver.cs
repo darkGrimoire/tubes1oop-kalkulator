@@ -21,7 +21,7 @@ namespace Solver
         public Solver(List<Expression> Term_Expr)
         {
             // Perform a Shallow Copy of existing "Term_Expr" List
-            this.List_Expr = new List<Expression>(Term_Expr);
+            this.List_Expr = Term_Expr;
             this.Operator_Stack = new Stack<Expression>();
             this.Value_Stack = new Stack<Expression>();
             this.Ans = 0.0;
@@ -83,7 +83,7 @@ namespace Solver
             }
 
             // 3. return the final value in value stack
-            this.Ans = this.Value_Stack.Peek().solve(); //NOTE:GetValuenya
+            this.Ans = this.Value_Stack.Peek().Solve(); //NOTE:GetValuenya
             return this.Ans;
         }
 
@@ -115,18 +115,9 @@ namespace Solver
         }
 
         // Validate is a token an operator symbol
-        public bool isOperator(Expression Expr)
+        public bool isOperator(object Expr)
         {
-            if (Expr.GetType().ToString().Equals("Operator")
-             && (Expr.solve() == '+'
-              || Expr.solve() == '-'
-              || Expr.solve() == '/'
-              || Expr.solve() == '*'
-              || Expr.solve() == '√'
-              || Expr.solve() == '^'
-              || Expr.solve().Equals("sin")
-              || Expr.solve().Equals("cos")
-              || Expr.solve().Equals("tan")))
+            if (Expr.GetType().ToString().Equals("Operator"))
             {
                 return true;
             }
@@ -139,16 +130,16 @@ namespace Solver
         // Function to find precedence of operators. 
         public int precedence(Expression Expr)
         {
-            if (Expr.solve() == '+' || Expr.solve() == '-')
+            if (Expr.Solve() == '+' || Expr.Solve() == '-')
             {
                 return 1;
             }
-            else if (Expr.solve() == '*' || Expr.solve() == '/')
+            else if (Expr.Solve() == '*' || Expr.Solve() == '/')
             {
                 return 2;
             }
-            else if (Expr.solve() == '^' || Expr.solve() == '√'
-                  || Expr.solve().Equals("sin") || Expr.solve().Equals("cos") || Expr.solve().Equals("tan"))
+            else if (Expr.Solve() == '^' || Expr.Solve() == '√'
+                  || Expr.Solve().Equals("sin") || Expr.Solve().Equals("cos") || Expr.Solve().Equals("tan"))
             {
                 return 3;
             }
@@ -178,37 +169,37 @@ namespace Solver
         }
         public bool isLeftBracketExpr(Expression Expr)
         {
-            return (Expr.GetType().ToString().Equals("RootExpression") && Expr.solve() == '(');
+            return (Expr.GetType().ToString().Equals("RootExpression") && Expr.Solve() == '(');
         }
         public bool isRightBracketExpr(Expression Expr)
         {
-            return (Expr.GetType().ToString().Equals("RootExpression") && Expr.solve() == ')');
+            return (Expr.GetType().ToString().Equals("RootExpression") && Expr.Solve() == ')');
         }
 
         // Function to perform arithmetic operations. 
         public Expression applyOp(Expression val1, Expression op, Expression val2)
         {
-            if (op.solve() == '+')
+            if (op.Solve() == '+')
             {
                 BinaryExpression Add = new AddExpression(val1, val2);
                 return Add;
             }
-            else if (op.solve() == '-')
+            else if (op.Solve() == '-')
             {
                 BinaryExpression Substract = new SubstractExpression(val1, val2);
                 return Substract;
             }
-            else if (op.solve() == '*')
+            else if (op.Solve() == '*')
             {
                 BinaryExpression Multiply = new MultiplyExpression(val1, val2);
                 return Multiply;
             }
-            else if (op.solve() == '/')
+            else if (op.Solve() == '/')
             {
                 BinaryExpression Division = new DivisionExpression(val1, val2);
                 return Division;
             }
-            else if (op.solve() == '^')
+            else if (op.Solve() == '^')
             {
                 BinaryExpression Appointment = new AppointmentExpression(val1, val2);
                 return Appointment;
@@ -217,22 +208,22 @@ namespace Solver
 
         public Expression applyOp(Expression op, Expression val)
         {
-            if (op.solve() == '√')
+            if (op.Solve() == '√')
             {
                 UnaryExpression Root = new RootExpression(val);
                 return Root;
             }
-            else if (op.solve().Equals("sin"))
+            else if (op.Solve().Equals("sin"))
             {
                 UnaryExpression Sin = new SinExpression(val);
                 return Sin;
             }
-            else if (op.solve().Equals("cos"))
+            else if (op.Solve().Equals("cos"))
             {
                 UnaryExpression Cos = new CosExpression(val);
                 return Cos;
             }
-            else if (op.solve().Equals("tan"))
+            else if (op.Solve().Equals("tan"))
             {
                 UnaryExpression Tan = new TanExpression(val);
                 return Tan;

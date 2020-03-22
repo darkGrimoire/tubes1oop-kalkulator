@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using KalkulatorOOP;
 
 // ASUMSI: Unary Expression dibuat di Parser.
 public class Parser
@@ -11,6 +12,9 @@ public class Parser
 		int i = 0;
 		// Default number = Integer
 		bool hasPoint = false;
+		bool isNegative = false;
+		bool isRoot = false;
+		string isTrigonometry = "";
 		StringBuilder buffer = new StringBuilder("");
 		while (i < token.Length)
 		{
@@ -21,11 +25,13 @@ public class Parser
 			{
 				if (token[i] == '-')
 				{
-					UnaryExpression unaryOp = new NegativeExpression();
+					//UnaryExpression unaryOp = new NegativeExpression();
+					isNegative = true;
 				}
 				else
 				{
-					UnaryExpression unaryOp = new RootExpression();
+					//UnaryExpression unaryOp = new RootExpression();
+					isRoot = true;
 				}
 			}
 			// If token is trigonometry unary expression, make the empty Unary Expression
@@ -33,14 +39,16 @@ public class Parser
 				  || token.Substring(i, 3).Equals("cos")
 				  || token.Substring(i, 3).Equals("tan"))
 			{
-				UnaryExpression unaryOp = new TrigonometryExpression(token.Substring(i, 3));
+				//UnaryExpression unaryOp = new TrigonometryExpression(token.Substring(i, 3));
+				isTrigonometry = token.Substring(i, 3);
+				i += 3;
 			}
 			// If token is an operator, push it to parseList
 			// TODO: make this into static Operator.isOperator(token[i])
 					else if (token[i] == '(' || token[i] == ')' || token[i] == '^'
 				  || token[i] == '+' || token[i] == '-' || token[i] == '*' || token[i] == '/')
 			{
-				TerminalExpression op = new Operator(token[i]);
+				Operator op = new Operator(token[i]);
 				parseList.Add(op);
 			}
 

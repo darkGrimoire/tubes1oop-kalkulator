@@ -2,22 +2,39 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Math;
+using static System.Math;
 using System.Threading.Tasks;
 using CalculatorException;
 
 namespace KalkulatorOOP
-{
-    public class Expression
+{   
+    abstract public class Expression
     {
 
         public Expression()
         {
 
         }
-        virtual double solve();
+        abstract public double Solve();
     }
+    public class Operator : Expression
+    {
+        protected char x;
+        public Operator(char x)
+        {
+            this.x = x;
+        }
 
+        public override double Solve()
+        {
+            throw new NotImplementedException();
+        }
+        public char GetOp()
+        {
+            return this.x;
+        }
+
+    }
     public class TerminalExpression : Expression
     {
         protected double x;
@@ -25,155 +42,155 @@ namespace KalkulatorOOP
         public TerminalExpression(double x)
             {
                 this.x = x;
-            }
-            public double solve()
+            }  
+        public override double Solve()
             {
                 return this.x;
             }
     }
-    public class UnaryExpression : Expression
+    abstract public class UnaryExpression : Expression
     {
-        protected Expression* x;
+        protected Expression x;
 
-        public UnaryExpression(Expression* x)
+        public UnaryExpression(Expression x)
         {
             this.x = x;
         }
-        virtual double solve();
+        //abstract public double Solve();
     }
 
-    public class BinaryExpression : Expression
+    abstract public class BinaryExpression : Expression
     {
-        protected Expression* x;
-        protected Expression* y;
+        protected Expression x;
+        protected Expression y;
 
-        public BinaryExpression(Expression* x, Expression* y)
+        public BinaryExpression(Expression x, Expression y)
         {
             this.x = x;
             this.y = y;
         }
-        virtual double solve();
+        //virtual double Solve();
     }
 
     public class NegativeExpression : UnaryExpression
     {
-        public NegativeExpression(Expression* a)
+        public NegativeExpression(Expression a) : base(a)
         {
-
+            
         }
-        public double solve()
+        public override double Solve()
         {
-            return (x.solve() * -1);
+            return (x.Solve() * -1);
         }
     }
 
     public class AddExpression : BinaryExpression
     {
-        public AddExpression(Expression* a, Expression* b)
+        public AddExpression(Expression a, Expression b) : base(a,b)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return (x.solve() + y.solve());
+            return (x.Solve() + y.Solve());
         }
     }
 
     public class SubstractExpression : BinaryExpression
     {
-        public SubstractExpression(Expression* a, Expression* b)
+        public SubstractExpression(Expression a, Expression b) : base(a,b)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return (x.solve() - y.solve());
+            return (x.Solve() - y.Solve());
         }
     }
 
     public class MultiplyExpression : BinaryExpression
     {
-        public MultiplyExpression(Expression* a, Expression* b)
+        public MultiplyExpression(Expression a, Expression b) : base(a,b)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return (x.solve * y.solve);
+            return (x.Solve() * y.Solve());
         }
     }
 
     public class DivisionExpression : BinaryExpression
     {
-        public DivisionExpression(Expression* a, Expression* b)
+        public DivisionExpression(Expression a, Expression b) : base(a,b)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return (x.solve() / y.solve());
+            return (x.Solve() / y.Solve());
         }
     }
 
     public class RootExpression : UnaryExpression
     {
-        public RootExpression(Expression* a)
+        public RootExpression(Expression a) : base(a)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return Math.Sqrt(x.solve());
+            return Math.Sqrt(x.Solve());
         }
 
     }
 
     public class AppointmentExpression : BinaryExpression
     {
-        public AppointmentExpression(Expression* a, Expression* b)
+        public AppointmentExpression(Expression a, Expression b) : base(a,b)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return Math.Pow(x.solve(), y.solve());
+            return Math.Pow(x.Solve(), y.Solve());
         }
 
     }
 
     public class SinExpression : UnaryExpression
     {
-        public SinExpression(Expression* a)
+        public SinExpression(Expression a) : base(a)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return (Math.Sin(x.solve()));
+            return (Math.Sin(x.Solve()));
         }
     }
 
     public class CosExpression : UnaryExpression
     {
-        public CosExpression(Expression* a)
+        public CosExpression(Expression a) : base(a)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return (Math.Cos(x.solve()));
+            return (Math.Cos(x.Solve()));
         }
     }
 
     public class TanExpression : UnaryExpression
     {
-        public TanExpression(Expression* a)
+        public TanExpression(Expression a) : base(a)
         {
 
         }
-        public double solve()
+        public override double Solve()
         {
-            return (Math.Tan(x.solve()));
+            return (Math.Tan(x.Solve()));
         }
     }
 }
