@@ -26,3 +26,9 @@ D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\De
 D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csproj.GenerateResource.cache
 D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.exe
 D:\Kuliah\SEM-4\IF2210 - OOP\OOP Tubes\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.pdb
+C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csprojAssemblyReference.cache
+C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.Form1.resources
+C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.Properties.Resources.resources
+C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.csproj.GenerateResource.cache
+C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.exe
+C:\Users\Faris Rizki Ekananda\Documents\GitHub\tubes1oop-kalkulator\KalkulatorOOP\obj\Debug\KalkulatorOOP.pdb
