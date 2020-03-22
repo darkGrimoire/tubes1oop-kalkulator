@@ -19,8 +19,10 @@ Struktur kode aplikasi dapat dilihat pada gambar di bawah ini.
 ### Windows
 1. Memmbuka file project menggunakan Visual Studio .NET dengan lokasi seperti path berikut: ...\tubes1oop-kalkulator\KalkulatorOOP\KalkulatorOOP.sln
 2. Menjalankan aplikasi dengan menekan tombol "Start" pada panel bar atau dengan menekan tombol shortkey F5
-3. Aplikasi akan berjalan dan dapat mulai digunakan
-4. Tekan tombol X apabila hendak menutup aplikasi
+3. Akan muncul tatap muka dari program, aplikasi akan berjalan dan dapat mulai digunakan
+4. Menekan tombol X pada bagian pojok kanan atas dari aplikasi akan menutup tatap muka aplikasi
 
 ## Screenshot Aplikasi
 Screenshot aplikasi dapat dilihat pada gambar di bawah ini
+
+![Aplikasi Kalkulator](https://user-images.githubusercontent.com/54386098/77262494-82af3180-6cc8-11ea-92b8-125db7126237.jpg)
