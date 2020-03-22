@@ -25,4 +25,4 @@ Struktur kode aplikasi dapat dilihat pada gambar di bawah ini.
 ## Screenshot Aplikasi
 Screenshot aplikasi dapat dilihat pada gambar di bawah ini
 
-![Aplikasi Kalkulator](https://user-images.githubusercontent.com/54386098/77262494-82af3180-6cc8-11ea-92b8-125db7126237.jpg)
+![Aplikasi Kalkulator (Updated)](https://user-images.githubusercontent.com/54386098/77263066-0ae20680-6cca-11ea-85eb-0a98d0386cfe.jpg)
