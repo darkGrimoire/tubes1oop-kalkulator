@@ -196,11 +196,8 @@ namespace KalkulatorOOP
             else{}
         }
         private void buttonAkar_Click(object sender, EventArgs e){
-            if (hasFirstClick == true)
-            {
-                this.textBox.Text += buttonAkar.Text;
-            }
-            else{}
+            hasFirstClick = true;
+            this.textBox.Text += buttonAkar.Text;
         }
         private void buttonCLEAR_Click(object sender, EventArgs e){
             if(hasFirstClick == true)
@@ -212,29 +209,16 @@ namespace KalkulatorOOP
             else { }
         }
         private void buttonSin_Click(object sender, EventArgs e){
-            if (hasFirstClick == true)
-            {
-                this.textBox.Text += buttonSin.Text;
-
-            }
-            else{}
+            hasFirstClick = true;
+            this.textBox.Text += buttonSin.Text;
         }
         private void buttonCos_Click(object sender, EventArgs e){
-            if (hasFirstClick == true)
-            {
-                this.textBox.Text += buttonCos.Text;
-
-            }
-            else{}
+            hasFirstClick = true;
+            this.textBox.Text += buttonCos.Text;
         }
         private void buttonTan_Click(object sender, EventArgs e){
-            if (hasFirstClick == true)
-            {
-                this.textBox.Text += buttonTan.Text;
-
-            }
-            else{
-            }
+            hasFirstClick = true;
+            this.textBox.Text += buttonTan.Text;
         }
         private void buttonBK_Click(object sender, EventArgs e){
             hasFirstClick = true;
