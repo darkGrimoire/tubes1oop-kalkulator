@@ -11,7 +11,7 @@ https://visualstudio.microsoft.com/vs/features/net-development/
 Community Edition is free
 
 ## Struktur Kode
-Struktur kode aplikasi dapat dilihat pada gambar di bawah ini.
+Struktur kode program dapat dilihat pada gambar di bawah ini.
 
 ![image](https://user-images.githubusercontent.com/54386098/77262185-dcaef780-6cc6-11ea-821c-c50cb8c09790.png)
 
