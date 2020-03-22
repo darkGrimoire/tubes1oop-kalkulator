@@ -6,8 +6,8 @@ using static System.Math;
 using System.Threading.Tasks;
 using CalculatorException;
 
-namespace KalkulatorOOP
-{   
+//namespace KalkulatorOOP
+//{   
     abstract public class Expression
     {
 
@@ -193,4 +193,4 @@ namespace KalkulatorOOP
             return (Math.Tan(x.Solve()));
         }
     }
-}
+//}
