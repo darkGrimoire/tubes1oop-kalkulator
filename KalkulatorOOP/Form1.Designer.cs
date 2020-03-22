@@ -60,6 +60,7 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.errorbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox
@@ -378,7 +379,7 @@
             this.buttonBAGI.Name = "buttonBAGI";
             this.buttonBAGI.Size = new System.Drawing.Size(75, 55);
             this.buttonBAGI.TabIndex = 16;
-            this.buttonBAGI.Text = ":";
+            this.buttonBAGI.Text = "/";
             this.buttonBAGI.UseVisualStyleBackColor = false;
             this.buttonBAGI.Click += new System.EventHandler(this.buttonBAGI_Click);
             // 
@@ -631,6 +632,16 @@
             this.errorbox.Size = new System.Drawing.Size(495, 19);
             this.errorbox.TabIndex = 30;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label2.Location = new System.Drawing.Point(14, 549);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Error:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -639,6 +650,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 619);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.errorbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonClose);
@@ -718,6 +730,7 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox errorbox;
+        private System.Windows.Forms.Label label2;
     }
 }
 
