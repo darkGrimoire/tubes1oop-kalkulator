@@ -59,6 +59,7 @@
             this.buttonPangkat = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox
@@ -85,7 +86,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button1.Location = new System.Drawing.Point(322, 360);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -104,7 +105,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button2.Location = new System.Drawing.Point(422, 360);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -123,7 +124,7 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button3.Location = new System.Drawing.Point(522, 360);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -142,7 +143,7 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button4.Location = new System.Drawing.Point(322, 295);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -161,7 +162,7 @@
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button5.Location = new System.Drawing.Point(422, 295);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -180,7 +181,7 @@
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button6.Location = new System.Drawing.Point(522, 295);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -199,7 +200,7 @@
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button7.Location = new System.Drawing.Point(322, 230);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -218,7 +219,7 @@
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button8.Location = new System.Drawing.Point(422, 230);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -237,7 +238,7 @@
             this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button9.Location = new System.Drawing.Point(522, 230);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -256,7 +257,7 @@
             this.button0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button0.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button0.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.button0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button0.Location = new System.Drawing.Point(422, 425);
             this.button0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -275,7 +276,7 @@
             this.buttonSD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonSD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonSD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSD.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonSD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonSD.Location = new System.Drawing.Point(632, 360);
             this.buttonSD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -294,7 +295,7 @@
             this.buttonT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonT.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonT.Location = new System.Drawing.Point(522, 425);
             this.buttonT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -313,7 +314,7 @@
             this.buttonPLUS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonPLUS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonPLUS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPLUS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPLUS.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonPLUS.ForeColor = System.Drawing.Color.HotPink;
             this.buttonPLUS.Location = new System.Drawing.Point(717, 360);
             this.buttonPLUS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -332,7 +333,7 @@
             this.buttonMINUS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonMINUS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonMINUS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMINUS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMINUS.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonMINUS.ForeColor = System.Drawing.Color.HotPink;
             this.buttonMINUS.Location = new System.Drawing.Point(717, 425);
             this.buttonMINUS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -351,7 +352,7 @@
             this.buttonMulti.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonMulti.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonMulti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMulti.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonMulti.ForeColor = System.Drawing.Color.HotPink;
             this.buttonMulti.Location = new System.Drawing.Point(632, 295);
             this.buttonMulti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -370,7 +371,7 @@
             this.buttonBAGI.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonBAGI.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonBAGI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBAGI.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBAGI.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonBAGI.ForeColor = System.Drawing.Color.HotPink;
             this.buttonBAGI.Location = new System.Drawing.Point(717, 295);
             this.buttonBAGI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -389,7 +390,7 @@
             this.buttonAkar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonAkar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonAkar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAkar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAkar.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonAkar.ForeColor = System.Drawing.Color.HotPink;
             this.buttonAkar.Location = new System.Drawing.Point(213, 295);
             this.buttonAkar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -408,7 +409,7 @@
             this.buttonAns.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonAns.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonAns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAns.Font = new System.Drawing.Font("VCR OSD Mono", 11F, System.Drawing.FontStyle.Bold);
             this.buttonAns.ForeColor = System.Drawing.Color.Red;
             this.buttonAns.Location = new System.Drawing.Point(213, 230);
             this.buttonAns.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -427,7 +428,7 @@
             this.buttonMC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonMC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMC.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonMC.ForeColor = System.Drawing.Color.LemonChiffon;
             this.buttonMC.Location = new System.Drawing.Point(127, 230);
             this.buttonMC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -446,7 +447,7 @@
             this.buttonMR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonMR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonMR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMR.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMR.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonMR.ForeColor = System.Drawing.Color.LemonChiffon;
             this.buttonMR.Location = new System.Drawing.Point(127, 295);
             this.buttonMR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -465,7 +466,7 @@
             this.buttonCLEAR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonCLEAR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonCLEAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCLEAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCLEAR.Font = new System.Drawing.Font("VCR OSD Mono", 11F, System.Drawing.FontStyle.Bold);
             this.buttonCLEAR.ForeColor = System.Drawing.Color.Red;
             this.buttonCLEAR.Location = new System.Drawing.Point(322, 425);
             this.buttonCLEAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -484,7 +485,7 @@
             this.buttonBK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonBK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonBK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBK.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonBK.ForeColor = System.Drawing.Color.HotPink;
             this.buttonBK.Location = new System.Drawing.Point(632, 230);
             this.buttonBK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -503,7 +504,7 @@
             this.buttonTK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonTK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTK.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonTK.ForeColor = System.Drawing.Color.HotPink;
             this.buttonTK.Location = new System.Drawing.Point(717, 230);
             this.buttonTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -522,7 +523,7 @@
             this.buttonSin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonSin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonSin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSin.Font = new System.Drawing.Font("VCR OSD Mono", 11F, System.Drawing.FontStyle.Bold);
             this.buttonSin.ForeColor = System.Drawing.Color.HotPink;
             this.buttonSin.Location = new System.Drawing.Point(127, 360);
             this.buttonSin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -541,7 +542,7 @@
             this.buttonCos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonCos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCos.Font = new System.Drawing.Font("VCR OSD Mono", 11F, System.Drawing.FontStyle.Bold);
             this.buttonCos.ForeColor = System.Drawing.Color.HotPink;
             this.buttonCos.Location = new System.Drawing.Point(127, 425);
             this.buttonCos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -560,7 +561,7 @@
             this.buttonTan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonTan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonTan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTan.Font = new System.Drawing.Font("VCR OSD Mono", 11F, System.Drawing.FontStyle.Bold);
             this.buttonTan.ForeColor = System.Drawing.Color.HotPink;
             this.buttonTan.Location = new System.Drawing.Point(213, 425);
             this.buttonTan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -579,7 +580,7 @@
             this.buttonPangkat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.buttonPangkat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.buttonPangkat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPangkat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPangkat.Font = new System.Drawing.Font("VCR OSD Mono", 15F, System.Drawing.FontStyle.Bold);
             this.buttonPangkat.ForeColor = System.Drawing.Color.HotPink;
             this.buttonPangkat.Location = new System.Drawing.Point(213, 360);
             this.buttonPangkat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -618,6 +619,18 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Kalkulator";
             // 
+            // errorbox
+            // 
+            this.errorbox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.errorbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.errorbox.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorbox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.errorbox.Location = new System.Drawing.Point(18, 588);
+            this.errorbox.Name = "errorbox";
+            this.errorbox.ReadOnly = true;
+            this.errorbox.Size = new System.Drawing.Size(495, 19);
+            this.errorbox.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -626,6 +639,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 619);
+            this.Controls.Add(this.errorbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonPangkat);
@@ -703,6 +717,7 @@
         private System.Windows.Forms.Button buttonPangkat;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox errorbox;
     }
 }
 

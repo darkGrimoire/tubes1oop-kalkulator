@@ -89,35 +89,34 @@ using KalkulatorOOP;
 
         void PopPopApplyPush()
         {
-            if (isBinaryOperator(this.Value_Stack.Peek()))
+            Expression Expr2 = this.Value_Stack.Peek();
+            this.Value_Stack.Pop();
+
+            if (isUnaryExpression(Expr2))
             {
-                Expression Expr2 = this.Value_Stack.Peek();
-                this.Value_Stack.Pop();
-
-                Expression Expr1 = this.Value_Stack.Peek();
-                this.Value_Stack.Pop();
-
-                Expression op = this.Operator_Stack.Peek();
-                this.Operator_Stack.Pop();
-                
-                if (((Operator)op).GetOp() == '/' && Expr2.Solve() == 0)
-                {
-                    throw new DivisionByZeroException();
-                } 
-                else
-                {
-                    this.Value_Stack.Push(applyOp(Expr1, op, Expr2));
-                }
+                TerminalExpression Term_Expr2 = new TerminalExpression(Expr2.Solve());
+                Expr2 = Term_Expr2;
             }
-            else if (isUnaryOperator(this.Value_Stack.Peek()))
+            
+            Expression Expr1 = this.Value_Stack.Peek();
+            this.Value_Stack.Pop();
+
+            if (isUnaryExpression(Expr1))
             {
-                Expression Expr1 = this.Value_Stack.Peek();
-                this.Value_Stack.Pop();
+                TerminalExpression Term_Expr1 = new TerminalExpression(Expr1.Solve());
+                Expr1 = Term_Expr1;
+            }
 
-                Expression op = this.Operator_Stack.Peek();
-                this.Operator_Stack.Pop();
+            Expression op = this.Operator_Stack.Peek();
+            this.Operator_Stack.Pop();
 
-                this.Value_Stack.Push(applyOp(op, Expr1));
+            if (((Operator)op).GetOp() == '/' && Expr2.Solve() == 0)
+            {
+                throw new DivisionByZeroException();
+            }
+            else
+            {
+                this.Value_Stack.Push(applyOp(Expr1, op, Expr2));
             }
         }
 
@@ -159,16 +158,7 @@ using KalkulatorOOP;
             }
         }
 
-        public bool isBinaryOperator(Expression Expr)
-        {
-            return (Expr.GetType().ToString().Equals("BinaryExpression")
-                 || Expr.GetType().ToString().Equals("AddExpression")
-                 || Expr.GetType().ToString().Equals("SubstractExpression")
-                 || Expr.GetType().ToString().Equals("MultiplyExpression")
-                 || Expr.GetType().ToString().Equals("DivisionExpression")
-                 || Expr.GetType().ToString().Equals("AppointmentExpression"));
-        }
-        public bool isUnaryOperator(Expression Expr)
+        public bool isUnaryExpression(Expression Expr)
         {
             return (Expr.GetType().ToString().Equals("UnaryExpression")
                  || Expr.GetType().ToString().Equals("TanExpression")
@@ -179,11 +169,11 @@ using KalkulatorOOP;
         }
         public bool isLeftBracketExpr(Expression Expr)
         {
-            return (Expr.GetType().ToString().Equals("RootExpression") && ((Operator)Expr).GetOp() == '(');
+            return (isOperator(Expr) && ((Operator)Expr).GetOp() == '(');
         }
         public bool isRightBracketExpr(Expression Expr)
         {
-            return (Expr.GetType().ToString().Equals("RootExpression") && ((Operator)Expr).GetOp() == ')');
+            return (isOperator(Expr) && ((Operator)Expr).GetOp() == ')');
         }
 
         // Function to perform arithmetic operations. 
@@ -213,30 +203,6 @@ using KalkulatorOOP;
             {
                 BinaryExpression Appointment = new AppointmentExpression(val1, val2);
                 return Appointment;
-            }
-        }
-
-        public Expression applyOp(Expression op, Expression val)
-        {
-            if (op.GetType().ToString().Equals("RootExpression"))
-            {
-                UnaryExpression Root = new RootExpression(val);
-                return Root;
-            }
-            else if (op.GetType().ToString().Equals("SinExpression"))
-            {
-                UnaryExpression Sin = new SinExpression(val);
-                return Sin;
-            }
-            else if (op.GetType().ToString().Equals("CosExpression"))
-            {
-                UnaryExpression Cos = new CosExpression(val);
-                return Cos;
-            }
-            else /*if (op.GetType().ToString().Equals("TanExpression"))*/
-            {
-                UnaryExpression Tan = new TanExpression(val);
-                return Tan;
             }
         }
 

@@ -22,7 +22,6 @@ namespace KalkulatorOOP
         bool hasPassedPoint = false;
         bool hasPassedUnary = false;
         int semaphore = 0;
-
         public Form1(){
             InitializeComponent();
         }
