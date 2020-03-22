@@ -1,0 +1,741 @@
+<Project>
+  <Name>KalkulatorOOP</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Class Diagram</Name>
+    <Language>CSharp</Language>
+    <Entities />
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>KalkulatorOOP.exe</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Expression</Name>
+        <Access>Public</Access>
+        <Location left="1540" top="918" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Expression()</Member>
+        <Member type="Method">public abstract Double Solve()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Operator</Name>
+        <Access>Public</Access>
+        <Location left="1297" top="918" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected Char x</Member>
+        <Member type="Constructor">public Operator(Char x)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Member type="Method">public Char GetOp()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TerminalExpression</Name>
+        <Access>Public</Access>
+        <Location left="1793" top="918" />
+        <Size width="200" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected Double x</Member>
+        <Member type="Constructor">public TerminalExpression(Double x)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UnaryExpression</Name>
+        <Access>Public</Access>
+        <Location left="2034" top="1306" />
+        <Size width="208" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected Expression x</Member>
+        <Member type="Constructor">public UnaryExpression(Expression x)</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BinaryExpression</Name>
+        <Access>Public</Access>
+        <Location left="852" top="1299" />
+        <Size width="277" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected Expression x</Member>
+        <Member type="Field">protected Expression y</Member>
+        <Member type="Constructor">public BinaryExpression(Expression x, Expression y)</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NegativeExpression</Name>
+        <Access>Public</Access>
+        <Location left="2549" top="1619" />
+        <Size width="219" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public NegativeExpression(Expression a)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddExpression</Name>
+        <Access>Public</Access>
+        <Location left="1169" top="1619" />
+        <Size width="268" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public AddExpression(Expression a, Expression b)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SubstractExpression</Name>
+        <Access>Public</Access>
+        <Location left="852" top="1907" />
+        <Size width="298" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public SubstractExpression(Expression a, Expression b)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MultiplyExpression</Name>
+        <Access>Public</Access>
+        <Location left="418" top="1907" />
+        <Size width="295" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public MultiplyExpression(Expression a, Expression b)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DivisionExpression</Name>
+        <Access>Public</Access>
+        <Location left="588" top="1619" />
+        <Size width="300" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public DivisionExpression(Expression a, Expression b)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RootExpression</Name>
+        <Access>Public</Access>
+        <Location left="2301" top="1619" />
+        <Size width="202" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public RootExpression(Expression a)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AppointmentExpression</Name>
+        <Access>Public</Access>
+        <Location left="1281" top="1907" />
+        <Size width="316" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public AppointmentExpression(Expression a, Expression b)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SinExpression</Name>
+        <Access>Public</Access>
+        <Location left="2066" top="1619" />
+        <Size width="192" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public SinExpression(Expression a)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CosExpression</Name>
+        <Access>Public</Access>
+        <Location left="1824" top="1619" />
+        <Size width="197" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public CosExpression(Expression a)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TanExpression</Name>
+        <Access>Public</Access>
+        <Location left="1576" top="1619" />
+        <Size width="194" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public TanExpression(Expression a)</Member>
+        <Member type="Method">public override Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MCMRQueue&lt;T&gt;</Name>
+        <Access>Public</Access>
+        <Location left="67" top="577" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Int32 maxElmt</Member>
+        <Member type="Constructor">public MCMRQueue()</Member>
+        <Member type="Constructor">public MCMRQueue(Int32 cap)</Member>
+        <Member type="Method">public Void Push(T val)</Member>
+        <Member type="Method">public T Pop()</Member>
+        <Member type="Method">public Void PrintQueue()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Parser</Name>
+        <Access>Public</Access>
+        <Location left="839" top="388" />
+        <Size width="190" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private List&lt;Expression&gt; parseList</Member>
+        <Member type="Constructor">public Parser(String token)</Member>
+        <Member type="Method">public Void Peek()</Member>
+        <Member type="Method">public Double Solve()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Program</Name>
+        <Access>Internal</Access>
+        <Location left="67" top="71" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">private static Void Main()</Member>
+        <Modifier>Static</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Solver</Name>
+        <Access>Internal</Access>
+        <Location left="733" top="697" />
+        <Size width="424" height="349" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">protected List&lt;Expression&gt; List_Expr { get; set; }</Member>
+        <Member type="Property">protected Stack&lt;Expression&gt; Operator_Stack { get; set; }</Member>
+        <Member type="Property">protected Stack&lt;Expression&gt; Value_Stack { get; set; }</Member>
+        <Member type="Property">protected Double Ans { get; set; }</Member>
+        <Member type="Constructor">public Solver(List&lt;Expression&gt; Term_Expr)</Member>
+        <Member type="Method">public Double Solve()</Member>
+        <Member type="Method">private Void PopPopApplyPush()</Member>
+        <Member type="Method">public Boolean isOperator(Object Expr)</Member>
+        <Member type="Method">public Int32 precedence(Expression Expr)</Member>
+        <Member type="Method">public Boolean isBinaryOperator(Expression Expr)</Member>
+        <Member type="Method">public Boolean isUnaryOperator(Expression Expr)</Member>
+        <Member type="Method">public Boolean isLeftBracketExpr(Expression Expr)</Member>
+        <Member type="Method">public Boolean isRightBracketExpr(Expression Expr)</Member>
+        <Member type="Method">public Expression applyOp(Expression val1, Expression op, Expression val2)</Member>
+        <Member type="Method">public Expression applyOp(Expression op, Expression val)</Member>
+        <Member type="Method">public Double getAns()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Form1</Name>
+        <Access>Public</Access>
+        <Location left="305" top="71" />
+        <Size width="315" height="1131" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private IContainer components</Member>
+        <Member type="Field">private TextBox textBox</Member>
+        <Member type="Field">private Button button1</Member>
+        <Member type="Field">private Button button2</Member>
+        <Member type="Field">private Button button3</Member>
+        <Member type="Field">private Button button4</Member>
+        <Member type="Field">private Button button5</Member>
+        <Member type="Field">private Button button6</Member>
+        <Member type="Field">private Button button7</Member>
+        <Member type="Field">private Button button8</Member>
+        <Member type="Field">private Button button9</Member>
+        <Member type="Field">private Button button0</Member>
+        <Member type="Field">private Button buttonSD</Member>
+        <Member type="Field">private Button buttonT</Member>
+        <Member type="Field">private Button buttonPLUS</Member>
+        <Member type="Field">private Button buttonMINUS</Member>
+        <Member type="Field">private Button buttonMulti</Member>
+        <Member type="Field">private Button buttonBAGI</Member>
+        <Member type="Field">private Button buttonAkar</Member>
+        <Member type="Field">private Button buttonAns</Member>
+        <Member type="Field">private Button buttonMC</Member>
+        <Member type="Field">private Button buttonMR</Member>
+        <Member type="Field">private Button buttonCLEAR</Member>
+        <Member type="Field">private Button buttonBK</Member>
+        <Member type="Field">private Button buttonTK</Member>
+        <Member type="Field">private Button buttonSin</Member>
+        <Member type="Field">private Button buttonCos</Member>
+        <Member type="Field">private Button buttonTan</Member>
+        <Member type="Field">private Button buttonPangkat</Member>
+        <Member type="Field">private Button buttonClose</Member>
+        <Member type="Field">private Label label1</Member>
+        <Member type="Constructor">public Form1()</Member>
+        <Member type="Method">private Void button1_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button2_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button3_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button4_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button5_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button6_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button7_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button8_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button9_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void button0_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonT_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonPLUS_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonMINUS_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonMulti_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonBAGI_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonAkar_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonCLEAR_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonSin_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonCos_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonTan_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonBK_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonTK_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonPangkat_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonAns_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonMC_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonMR_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonSD_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">private Void buttonClose_Click(Object sender, EventArgs e)</Member>
+        <Member type="Method">protected virtual Void Dispose(Boolean disposing)</Member>
+        <Member type="Method">private Void InitializeComponent()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DivisionByZeroException</Name>
+        <Access>Public</Access>
+        <Location left="2222" top="388" />
+        <Size width="182" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public override String Message { get; }</Member>
+        <Member type="Constructor">public DivisionByZeroException()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NegativeRootException</Name>
+        <Access>Public</Access>
+        <Location left="1963" top="388" />
+        <Size width="234" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Double realNumber</Member>
+        <Member type="Property">public override String Message { get; }</Member>
+        <Member type="Constructor">private NegativeRootException(Int32 num)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TooManyInputsException</Name>
+        <Access>Public</Access>
+        <Location left="2434" top="388" />
+        <Size width="242" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Int32 inputSize</Member>
+        <Member type="Property">public override String Message { get; }</Member>
+        <Member type="Constructor">public TooManyInputsException(Int32 size)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>QueueEmptyException</Name>
+        <Access>Public</Access>
+        <Location left="1769" top="388" />
+        <Size width="177" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public override String Message { get; }</Member>
+        <Member type="Constructor">public QueueEmptyException()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RepeatButtonPushException</Name>
+        <Access>Public</Access>
+        <Location left="1584" top="388" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Int32 buttonID</Member>
+        <Member type="Field">private String[] buttonName</Member>
+        <Member type="Property">public override String Message { get; }</Member>
+        <Member type="Constructor">public RepeatButtonPushException(Int32 buttonID)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>ButtonIDs</Name>
+        <Access>Public</Access>
+        <Location left="1372" top="388" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>titik = 0</Value>
+        <Value>tambah = 1</Value>
+        <Value>kurang = 2</Value>
+        <Value>kali = 3</Value>
+        <Value>bagi = 4</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>Exception</Name>
+        <Access>Public</Access>
+        <Location left="1998" top="186" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Queue&lt;T&gt;</Name>
+        <Access>Public</Access>
+        <Location left="67" top="428" />
+        <Size width="162" height="99" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void Clear()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Nesting" first="24" second="25">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1767</X>
+          <Y>1026</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1727</X>
+          <Y>1026</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2094</X>
+          <Y>1276</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1647</X>
+          <Y>1160</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1055</X>
+          <Y>1273</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2628</X>
+          <Y>1571</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2211</X>
+          <Y>1547</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1247</X>
+          <Y>1594</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1042</X>
+          <Y>1544</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>990</X>
+          <Y>1881</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>990</X>
+          <Y>1540</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>497</X>
+          <Y>1566</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>880</X>
+          <Y>1540</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="9" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>668</X>
+          <Y>1594</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>938</X>
+          <Y>1540</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="10" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>2179</X>
+          <Y>1547</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="11" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1508</X>
+          <Y>1569</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1089</X>
+          <Y>1540</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="12" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2141</X>
+          <Y>1591</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2141</X>
+          <Y>1551</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="13" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1901</X>
+          <Y>1594</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2105</X>
+          <Y>1548</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="14" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1655</X>
+          <Y>1577</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2058</X>
+          <Y>1547</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="3" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2152</X>
+          <Y>1236</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1683</X>
+          <Y>1160</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>x</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>931</X>
+          <Y>1202</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1555</X>
+          <Y>1160</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>x</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>993</X>
+          <Y>1232</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1587</X>
+          <Y>1159</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>y</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="24" second="26">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1664</X>
+          <Y>276</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2020</X>
+          <Y>262</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="23" second="26">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>2047</X>
+          <Y>260</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="21" second="26">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="20" second="26">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>2104</X>
+          <Y>259</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="22" second="26">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2553</X>
+          <Y>285</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2138</X>
+          <Y>256</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="15" second="27">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>150</X>
+          <Y>553</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="17" second="19">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="19" second="16">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="18" second="16">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="15" second="19">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="19" second="26">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="21">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1066</X>
+          <Y>617</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2086</X>
+          <Y>626</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="18" second="20">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1018</X>
+          <Y>672</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="0" second="18">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1187</X>
+          <Y>857</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>964</X>
+          <Y>629</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1648</X>
+          <Y>725</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1..*</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

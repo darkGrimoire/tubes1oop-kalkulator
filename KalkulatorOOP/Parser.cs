@@ -28,7 +28,7 @@ public class Parser
 			// If token is unary expression (-, √), make the empty Unary Expression
 			else if ((token[i] == '-' || token[i] == '√') && !hasPassedNum)
 			{
-				if (hasPassedOperator || i == 0)
+				if (hasPassedOperator || i == 0 || isNegative)
 				{
 					if (token[i] == '-')
 					{
@@ -93,6 +93,12 @@ public class Parser
 			if (isNum)
 			{
 				TerminalExpression termExpr = new TerminalExpression(double.Parse(buffer.ToString(), System.Globalization.CultureInfo.InvariantCulture));
+				if (isRoot && isNegative)
+				{
+					UnaryExpression UnExpr = new NegativeExpression(new RootExpression(termExpr)); isUnary = true;
+					isRoot = false; isNegative = false;
+					this.parseList.Add(UnExpr);
+				}
 				if (isRoot)
 				{
 					UnaryExpression UnExpr = new RootExpression(termExpr); isUnary = true;
