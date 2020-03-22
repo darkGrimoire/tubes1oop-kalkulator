@@ -301,17 +301,21 @@ namespace KalkulatorOOP
             else{}
         }
         private void buttonSD_Click(object sender, EventArgs e){
-            if (hasFirstClick == true)
+            try
             {
-                Parser parseExpression = new Parser(textBox.Text);
-                ans = parseExpression.Solve();
-                textBox.Clear();
-                textBox.Text = ans.ToString();
+                if (hasFirstClick == true)
+                {
+                    Parser parseExpression = new Parser(textBox.Text);
+                    ans = parseExpression.Solve();
+                }
+                else{}
             }
-            else
+            catch (Exception exx)
             {
-
+                errorbox.Text = exx.Message;
             }
+            textBox.Clear();
+            textBox.Text = ans.ToString();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
