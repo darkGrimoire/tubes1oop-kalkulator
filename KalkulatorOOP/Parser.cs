@@ -43,7 +43,7 @@ public class Parser
 						}
 						else if (unaryStack.Peek() == 2)
 						{
-							throw new Exception();
+							throw new NegativeRootException();
 						}
 						else
 						{

@@ -19,16 +19,11 @@ namespace CalculatorException
 
     public class NegativeRootException : Exception
     {
-        private double realNumber;
-        public NegativeRootException(double num)
-        {
-            this.realNumber = num;
-        }
         public override string Message
         {
             get
             {
-                return "Error mencari akar dari " + this.realNumber;
+                return "Error mencari akar dari angka negatif!";
             }
         }
     }

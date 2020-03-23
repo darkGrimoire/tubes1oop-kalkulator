@@ -21,11 +21,13 @@ namespace KalkulatorOOP
         bool hasPassedNum = false;
         bool hasPassedPoint = false;
         bool hasPassedUnary = false;
+        bool answered = false;
         int semaphore = 0;
         public Form1(){
             InitializeComponent();
         }
         private void button1_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button1.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -34,6 +36,7 @@ namespace KalkulatorOOP
 
         }
         private void button2_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button2.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -41,6 +44,7 @@ namespace KalkulatorOOP
             hasFirstClick = true;
         }
         private void button3_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button3.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -48,6 +52,7 @@ namespace KalkulatorOOP
             hasFirstClick = true;
         }
         private void button4_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button4.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -55,6 +60,7 @@ namespace KalkulatorOOP
             hasPassedNegative = false;
         }
         private void button5_Click(object sender, EventArgs e) {
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button5.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -62,6 +68,7 @@ namespace KalkulatorOOP
             hasPassedNegative = false;
         }
         private void button6_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button6.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -69,6 +76,7 @@ namespace KalkulatorOOP
             hasPassedNegative = false;
         }
         private void button7_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button7.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -76,6 +84,7 @@ namespace KalkulatorOOP
             hasPassedNegative = false;
         }
         private void button8_Click(object sender, EventArgs e) {
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button8.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -83,6 +92,7 @@ namespace KalkulatorOOP
             hasPassedNegative = false;
         }
         private void button9_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button9.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -90,6 +100,7 @@ namespace KalkulatorOOP
             hasPassedNegative = false;
         }
         private void button0_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             this.textBox.Text += button0.Text;
             hasPassedNum = true;
             hasPassedOperator = false;
@@ -97,6 +108,7 @@ namespace KalkulatorOOP
             hasPassedNegative = false;
         }
         private void buttonT_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             if (!hasPassedPoint)
             {
                 this.textBox.Text += buttonT.Text;
@@ -105,6 +117,7 @@ namespace KalkulatorOOP
             hasFirstClick = true;
         }
         private void buttonPLUS_Click(object sender, EventArgs e){
+            if (answered) { answered = false;}
             if (hasFirstClick==true)
             {
                 if (hasPassedNegative)
@@ -130,6 +143,7 @@ namespace KalkulatorOOP
             }
         }
         private void buttonMINUS_Click(object sender, EventArgs e){
+            if (answered) {  answered = false;}
             hasFirstClick = true;
             if (hasPassedNegative)
             {
@@ -149,6 +163,7 @@ namespace KalkulatorOOP
             }
         }
         private void buttonMulti_Click(object sender, EventArgs e){
+            if (answered) {  answered = false;}
             if (hasFirstClick == true)
             {
                 if (hasPassedNegative)
@@ -174,6 +189,7 @@ namespace KalkulatorOOP
             }
         }
         private void buttonBAGI_Click(object sender, EventArgs e){
+            if (answered) {  answered = false;}
             if (hasFirstClick == true)
             {
                 if (hasPassedNegative)
@@ -196,11 +212,12 @@ namespace KalkulatorOOP
             else{}
         }
         private void buttonAkar_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             hasFirstClick = true;
             this.textBox.Text += buttonAkar.Text;
         }
         private void buttonCLEAR_Click(object sender, EventArgs e){
-            if(hasFirstClick == true)
+            if (hasFirstClick == true)
             {
                 textBox.Clear();
                 queue.Clear();
@@ -209,23 +226,28 @@ namespace KalkulatorOOP
             else { }
         }
         private void buttonSin_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             hasFirstClick = true;
             this.textBox.Text += buttonSin.Text;
         }
         private void buttonCos_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             hasFirstClick = true;
             this.textBox.Text += buttonCos.Text;
         }
         private void buttonTan_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             hasFirstClick = true;
             this.textBox.Text += buttonTan.Text;
         }
         private void buttonBK_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             hasFirstClick = true;
             this.textBox.Text += buttonBK.Text;
             semaphore++;
         }
         private void buttonTK_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             if (hasFirstClick == true)
             {
                 if (semaphore > 0)
@@ -237,6 +259,7 @@ namespace KalkulatorOOP
             else{}
         }
         private void buttonPangkat_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             if (hasFirstClick == true)
             {
                 if (hasPassedNegative)
@@ -259,13 +282,14 @@ namespace KalkulatorOOP
             else{}
         }
         private void buttonAns_Click(object sender, EventArgs e){
-            if (hasFirstClick == true)
-            {
-                ans = this.ans;
-                textBox.Clear();
-                this.textBox.Text = ans.ToString();
-            }
-            else{}
+            if (answered) { textBox.Text = "";  answered = false;}
+            //if (hasFirstClick == true)
+            //{
+            this.textBox.Text += ans.ToString();
+            hasPassedNum = true;
+            hasPassedOperator = false;
+            //}
+            //else{}
         }
         private void buttonMC_Click(object sender, EventArgs e){
             if (hasFirstClick == true)
@@ -275,6 +299,7 @@ namespace KalkulatorOOP
             else{}
         }
         private void buttonMR_Click(object sender, EventArgs e){
+            if (answered) { textBox.Text = "";  answered = false;}
             if (hasFirstClick == true)
             {
                 double mR = 0;
@@ -282,6 +307,8 @@ namespace KalkulatorOOP
                 {
                     mR = queue.Pop();
                     this.textBox.Text += mR.ToString();
+                    hasPassedNum = true;
+                    hasPassedOperator = false;
                 }
                 catch (Exception ex)
                 {
@@ -293,6 +320,8 @@ namespace KalkulatorOOP
         private void buttonSD_Click(object sender, EventArgs e){
             try
             {
+                if (semaphore != 0) { throw new Exception("Incomplete Brackets!"); }
+                if (!hasPassedNum) { throw new Exception("Incomplete Expression!"); }
                 if (hasFirstClick == true)
                 {
                     Parser parseExpression = new Parser(textBox.Text);
@@ -306,6 +335,7 @@ namespace KalkulatorOOP
             }
             textBox.Clear();
             textBox.Text = ans.ToString();
+            answered = true;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
