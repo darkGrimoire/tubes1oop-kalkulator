@@ -285,7 +285,7 @@ namespace KalkulatorOOP
             if (answered) { textBox.Text = "";  answered = false;}
             //if (hasFirstClick == true)
             //{
-            this.textBox.Text += ans.ToString();
+            this.textBox.Text += ans.ToString().Replace(',','.');
             hasPassedNum = true;
             hasPassedOperator = false;
             //}
@@ -294,7 +294,7 @@ namespace KalkulatorOOP
         private void buttonMC_Click(object sender, EventArgs e){
             if (hasFirstClick == true)
             {
-                queue.Push(Convert.ToDouble(textBox.Text));
+                queue.Push(double.Parse(ans.ToString().Replace(',', '.'), System.Globalization.CultureInfo.InvariantCulture));
             }
             else{}
         }
@@ -306,7 +306,7 @@ namespace KalkulatorOOP
                 try
                 {
                     mR = queue.Pop();
-                    this.textBox.Text += mR.ToString();
+                    this.textBox.Text += mR.ToString().Replace(',','.');
                     hasPassedNum = true;
                     hasPassedOperator = false;
                 }
@@ -334,7 +334,7 @@ namespace KalkulatorOOP
                 errorbox.Text = exx.Message;
             }
             textBox.Clear();
-            textBox.Text = ans.ToString();
+            textBox.Text = ans.ToString().Replace(',','.');
             answered = true;
         }
 
