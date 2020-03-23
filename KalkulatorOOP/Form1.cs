@@ -221,7 +221,13 @@ namespace KalkulatorOOP
             {
                 textBox.Clear();
                 queue.Clear();
+                ans = 0;
                 hasFirstClick = false;
+                hasPassedNum = false;
+                hasPassedOperator = false;
+                hasPassedNegative = false;
+                hasPassedPoint = false;
+                semaphore = 0;
             }
             else { }
         }
@@ -283,13 +289,13 @@ namespace KalkulatorOOP
         }
         private void buttonAns_Click(object sender, EventArgs e){
             if (answered) { textBox.Text = "";  answered = false;}
-            //if (hasFirstClick == true)
-            //{
-            this.textBox.Text += ans.ToString().Replace(',','.');
+            if (hasFirstClick == true)
+            {
+                this.textBox.Text += ans.ToString().Replace(',','.');
             hasPassedNum = true;
             hasPassedOperator = false;
-            //}
-            //else{}
+            }
+            else { }
         }
         private void buttonMC_Click(object sender, EventArgs e){
             if (hasFirstClick == true)
